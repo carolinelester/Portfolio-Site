@@ -1,0 +1,22 @@
+/*!
+ * [Inputs - Table of contents]
+ * 1. Input
+ * 2. Textarea
+ * 3. Select
+ */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+    margin: 0;
+}
+
+input, textarea, select{
+  font-size:$p-fs;
+  margin: 0;
+  padding: 0;
+  border: none!important;
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+

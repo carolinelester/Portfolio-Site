@@ -1,0 +1,186 @@
+form.sub-form {
+
+  position: relative;
+  padding: 0 $elem-pad-px;
+  overflow: hidden;
+  @include elem-border-side(left);
+
+
+  &.active-sending {
+    span.sending {
+      display: block;
+    }
+  }
+
+  span {
+    color: $primary-c;
+  }
+
+  span.sending {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    text-align: center;
+    padding-top: 160px;
+    background: rgba($secondary-c, .95);
+    @include elem-border();
+    @include border-side-hidden(left);
+    display: none;
+    z-index: 3;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 110px;
+      border: none;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding-top: 120px;
+    }
+  }
+
+  &.active-sent {
+    span.sent {
+      display: block;
+    }
+  }
+
+  span.sent {
+    content: 'You\'ve are subscribed!';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    text-align: center;
+    padding-top: 160px;
+    background: rgba($secondary-c, .95);
+    @include elem-border();
+    @include border-side-hidden(left);
+    display: none;
+    z-index: 3;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 110px;
+      border: none;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding-top: 120px;
+    }
+
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include border-side-hidden(left);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    padding-top: $elem-pad-px;
+    border: solid 1px $primary-c;
+  }
+
+  h4 {
+    margin-bottom: $elem-pad-px;
+    padding-top: 22px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+      font-size: $h4-fs;
+      display: block;
+      text-align: left!important;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding-top: 5px;
+    }
+  }
+
+  label {
+    display: none;
+  }
+
+
+  button.btn.btn-primary, input[type="text"], input[type="email"] {
+    width: 100%;
+    color: $primary-c;
+    text-align: left;
+    height: 45px;
+    margin-bottom: 19px;
+    @include elem-border-side(bottom, !important);
+
+    &:focus, &:active {
+      @include prefix(box-shadow,  0px 2px 0px 0px $white);
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $elem-pad-px / 2;
+      height: 40px;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      margin-bottom: $elem-pad-px / 2;
+    }
+  }
+
+
+  input[type="text"], input[type="email"] {
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      @include elem-border(!important);
+    }
+  }
+
+  input[type="text"] {
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      //@include elem-border-side(right, !important);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  input[type="email"] {
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      margin-left: -6px;
+    }
+  }
+
+  button.btn.btn-primary {
+    text-align: center;
+    margin: $elem-pad-px 0;
+    height: 60px;
+
+    &:hover {
+      @include prefix(box-shadow,  0px 2px 0px 0px $white);
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 45px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      margin: 15px 0 45px;
+      @include elem-border(!important);
+    }
+
+  }//end btn primary
+
+
+  div.form-group {
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      margin-bottom: 0!important;
+    }
+  }
+
+}//end sub-form

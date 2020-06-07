@@ -1,0 +1,18 @@
+/*!
+ * [Footer - Table of contents]
+ * 1. Footer
+ */
+footer {
+
+  .row > div {
+    @include border-side-hidden(top);
+    @include border-side-hidden(bottom);
+  }
+
+  p {
+    padding-top: $elem-pad-px;
+    position: relative;
+    right: -12px;
+    font-size: $fs-sm;
+  }
+}

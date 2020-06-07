@@ -1,0 +1,327 @@
+/*!
+ * [Coming soon page - Table of contents]
+ * 1. Wrapper | #fullscreen.fs-coming-soon
+ * 2. Fullscreen nav bar
+ */
+html.html-fs, body.body-fs.coming-soon {
+  height: 100%;
+  padding-top: 0;
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+
+    &.coming-soon-countdown {
+      .opl {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@import "nav-style-2";
+
+section#fullscreen.fs-coming-soon {
+
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: $secondary-c;
+  text-align: center;
+  position: relative;
+  display: table;
+  @include elem-border-side(left);
+  @include elem-border-side(right);
+  @include elem-border-side(top);
+
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding: 15px 0 $elem-pad-px;
+  }
+
+  & > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    & > div.container {
+      width: auto;
+      text-align: left;
+      position: relative;
+      display: inline-block;
+
+
+      @media(min-width: 414px) and (max-width: 736px) and (orientation: portrait) {
+        padding: 0!important;
+        width: calc(100% - 30px)!important;
+      }
+
+
+      @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+        div.row > div {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        h1 {
+          overflow: hidden;
+          margin-bottom: -6px;
+        }
+      }
+
+
+
+      &:hover {
+        h1, h2, h3, .cta {
+          border-color: $primary-c!important;
+          background: $secondary-c;
+          color: $primary-c;
+        }
+
+        form.sub-form {
+          background: $primary-c;
+
+          h4 {
+            color: $secondary-c;
+          }
+
+          button.btn.btn-primary {
+            background: $secondary-c;
+          }
+        }
+      }//end hover
+
+
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+
+        h1, h2, h3, .cta {
+          border-color: $primary-c!important;
+          background: $secondary-c;
+          color: $primary-c;
+        }
+
+        form.sub-form {
+          background: $primary-c;
+
+          h4 {
+            color: $secondary-c;
+          }
+
+          button.btn.btn-primary {
+            background: $secondary-c;
+          }
+        }
+      }
+
+    }//end container
+  }
+
+  h1, h2, h3 {
+    color: $secondary-c;
+    background-color: $primary-c;
+    padding: 0 $elem-pad-px / 2;
+    display: inline-block;
+    width: auto;
+    @include elem-border();
+
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      border-color: $primary-c!important;
+    }
+  }
+
+
+  h1 {
+    font-size: 140px;
+    margin-bottom: 0;
+    position: relative;
+    line-height: 150px;
+    padding: 3px 10px 6px 17px;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 2px;
+    padding-left: 16px;
+    font-weight: normal;
+
+
+    @include media-breakpoint-down(sm) {
+      font-size: 70px;
+      margin-bottom: 0;
+      line-height: 70px;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding: 3px 0 13px 17px;
+      @include elem-border-side(top);
+      @include elem-border-side(bottom);
+      border-top-color: $secondary-c!important;
+      border-bottom-color: $secondary-c!important;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      font-size: 122px;
+      padding-left: 11px;
+    }
+
+
+  }//end h1
+
+
+  h2 {
+    font-size: 2.2em;
+    padding: 20px 27px 20px 27px;
+    margin-top: -1px;
+    text-align: center;
+    width: 100%;
+    height: 90px;
+    line-height: 50px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: $h3-fs;
+      padding: 10px;
+      margin-bottom: 0;
+      line-height: 36px;
+      height: auto;
+      text-align: left;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      font-size: 2.5em;
+      font-weight: 300;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      font-weight: 300;
+      font-size: 30px;
+      padding: 20px 15px;
+    }
+
+  }
+
+
+  h3 {
+    font-size: 50px;
+    padding: 20px 0;
+    margin-bottom: -1px;
+    width: 100%;
+    letter-spacing: 17px;
+    text-align: center;
+    position: relative;
+    padding-left: 13px;
+    height: 90px;
+    line-height: 50px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: $h3-fs;
+      padding: 15px 10px;
+      letter-spacing: 5px;
+      height: auto;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      font-size: 2.5em;
+      font-weight: 300;
+
+      span {
+        min-width: 100%;
+      }
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      font-size: 42px;
+      padding-right: 0;
+      letter-spacing: 15px;
+      font-weight: 300;
+    }
+  }
+
+
+  p.coming-soon-contact, p.coming-soon-copyright {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 3;
+  }
+
+
+  p.coming-soon-contact {
+    bottom: 135px;
+    left: 0;
+    right: 0;
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      &:hover:before {
+        height: 3px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: calc(100% - 2px);
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #000;
+        -webkit-transition: height .3s ease-in-out;
+        transition: height .3s ease-in-out;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      bottom: 15px;
+      padding-left: 15px;
+      text-align: left;
+      font-size: $fs-sm;
+      z-index: 4;
+      left: 0;
+      width: auto;
+    }
+
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      bottom: 15px;
+      padding-left: 35px;
+      text-align: left;
+      font-size: $fs-sm;
+      z-index: 4;
+      left: 0;
+      width: auto;
+    }
+
+  }//end contact
+
+
+  p.coming-soon-copyright {
+    text-align: right;
+    padding-right: 35px;
+    font-size: $fs-sm;
+    left: 0;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 15px;
+    }
+  }
+
+
+
+}//end fullscreen

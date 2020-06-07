@@ -1,0 +1,325 @@
+/*!
+ * Author: Theme designed and developed by Michael Palmer, MP Web.
+ * Website: https://www.michaelpalmerwebdesign.com.
+ * Copyright MP Web 2018.
+ * Theme website: https://www.brutalist.design.
+ */
+
+/*!
+ * [Brutal Site Template - Table of contents]
+ * 1. Bootstrap
+ * 2. html
+ * 3. body
+ * 4. Fonts
+ * 5. Typography
+ * 6. Buttons
+ * 7. Lists
+ * 8. Inputs
+ * 9. Anchors
+ * 10. Navigation | nav
+ * 11. Fullscreen Hero section | #hero
+ * 12. Features | #features
+ * 13. Services | #services
+ * 14. Pricing | #pricing
+ * 15. Gallery | #gallery
+ * 16. Video | #video
+ * 17. Products | #products
+ * 18. Team | #team
+ * 19. Contact | #contact
+ * 20. Preloader | .preloader
+ * 21. Footer | footer
+ * 22. Navigation fullscreen | .nav-fs
+ * 23. Fullscreen section | #fullscreen
+ * 24. Coming soon | .fs-coming-soon
+ * 25. Coming soon countdown | .coming-soon-countdown
+ * 26. Coming soon background | .coming-soon-background
+ * 27. Coming soon background and countdown | .coming-soon-background
+ */
+
+@import 'bootstrap/bootstrap-reboot';
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap-grid';
+//Template default colors
+$default-c-1: #000;
+$default-c-2: #fff;
+@import "partials/base";
+@import "variables";
+@import "mixins";
+@import "modules/bootstrap_overrides";
+@import "modules/nav";
+@import "modules/nav-style-2";
+@import "modules/header";
+@import "modules/components/_require_components";
+@import "modules/footer";
+
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(255, 255, 255, 0.01) 0 0 1px;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+
+  background-color: $secondary-c;
+  border-bottom:$bstyle 1px $primary-c;
+
+  @if $border-width > 1 {
+    border-width: $border-width;
+  }
+
+  @media(min-width: 768px) and (max-width: 1024px) {
+    border: none;
+    @include elem-border-side(bottom);
+  }
+
+  @include media-breakpoint-down(xs) {
+    border:$bstyle 4px $primary-c;
+  }
+
+  //fullscreen page
+  &.body-fs {
+    padding-top: 47px;
+
+
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 42px;
+    }
+  }
+
+}//end body
+
+
+h1, h2, h3, h4, h5, p, li, label, input, textarea, strong, button {
+  color: $primary-c;
+}
+
+
+input, textarea {
+  color: $primary-c!important;
+  background-color: $secondary-c!important;
+}
+
+
+a {
+  color: $primary-c;
+
+  &:hover {
+    color: $primary-c;
+    text-decoration: none;
+  }
+}
+
+
+.anchor {
+  cursor: pointer;
+  &:hover {
+    background: $primary-c;
+    color: $secondary-c;
+
+    & > * {
+      color: $secondary-c;
+    }
+  }
+}
+
+
+.elem-border {
+  & > div {
+    @include elem-border();
+
+    @include media-breakpoint-down(xs) {
+      @include border-side-hidden(left);
+      @include border-side-hidden(right);
+    }
+
+    & + div {
+      @include border-side-hidden(left);
+    }
+  }
+}
+
+
+.btn-style-main {
+  position: relative;
+
+  -webkit-transition-delay: .30s;
+  -moz-transition-delay: .30s;
+  -o-transition-delay: .30s;
+  transition-delay: .30s;
+
+  &, a, span, button {
+    outline: solid 1px $secondary-c;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    -webkit-transition: outline .15s ease-in-out;
+    -moz-transition: outline .15s ease-in-out;
+    -o-transition: outline .15s ease-in-out;
+    transition: outline .15s ease-in-out;
+  }
+
+  a, button {
+    -webkit-transition-delay: .15s;
+    -moz-transition-delay: .15s;
+    -o-transition-delay: .15s;
+    transition-delay: .15s;
+
+    &:hover span {
+      background: $primary-c;
+      color: $secondary-c;
+    }
+  }
+
+  span {
+    outline: solid $border-width $primary-c;
+  }
+
+  &:hover {
+    outline: solid 1px $primary-c;
+
+    a, button {
+      outline: solid 1px $primary-c;
+    }
+  }
+}
+
+
+a.opl {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+
+.stretch-text {
+  span {
+    display: inline-block!important;
+    white-space: nowrap;
+
+    @media(max-width: 767px) {
+      white-space: normal;
+    }
+  }
+}
+
+
+//Fullscreen bg
+@import 'modules/fullscreen';
+
+
+//Coming soon
+@import 'modules/coming-soon';
+
+
+//Coming soon countdown
+@import 'modules/coming-soon-countdown';
+
+
+//Coming soon with background
+@import 'modules/coming-soon-background';
+
+
+//Coming soon countdown with background image
+@import 'modules/coming-soon-countdown-background';
+
+
+@import "landing";
+
+
+
+
+
+//STYLE TOGGLE - LIVE ONLY
+div.style-toggle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  min-width: 71px;
+  background: $secondary-c;
+  border: solid 1px $primary-c;
+  border-bottom: none;
+  border-left: none;
+  z-index: 100;
+  padding: 15px;
+  text-align: center;
+
+
+  @media(max-width: 767px) {
+    min-width: 0;
+    border: none;
+    padding: 0;
+  }
+
+  strong.style-toggle-title {
+    font-weight: lighter;
+    display: inline-block;
+    width: 100%;
+
+    @media(max-width: 767px) {
+      display: none;
+
+      & + br {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border: solid 1px $primary-c;
+    position: relative;
+    margin-top: 8px;
+    cursor: pointer;
+
+    @media(max-width: 767px) {
+      margin-top: 0;
+      vertical-align: bottom;
+    }
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: $primary-c;
+      border-radius: 100%;
+    }
+  }
+
+
+
+}
+//STYLE TOGGLE - LIVE ONLY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

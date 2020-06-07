@@ -1,0 +1,116 @@
+/*!
+ * [Coming soon countdown with background page - Table of contents]
+ * 1. Fullscreen | #fullscreen.coming-soon-countdown-background
+ * 2. Countdown timer | .coming-soon-bg-timer
+ */
+section#fullscreen.coming-soon-background.coming-soon-countdown-background {
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    &:before {
+      height: 60%;
+    }
+
+    &:after {
+      height: 40%;
+    }
+  }
+
+  @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    div.titles-wrap {
+      top: 0;
+    }
+
+    &:before {
+      height: 60%;
+    }
+
+    &:after {
+      height: 43.5%;
+    }
+
+    form.sub-form {
+      padding-top: 0 !important;
+      margin-top: 60px !important;
+
+      h4 {
+        padding-top: 30px;
+      }
+    }
+
+    & > div {
+      & > div.container:hover {
+        div.timer-wrap-outer {
+          background: $secondary-c;
+          border-color: $primary-c!important;
+          @include border-side-hidden(bottom);
+
+          & * {
+            color: $primary-c!important;
+            border-color: $primary-c!important;
+          }
+        }
+      }
+    }
+  }
+
+}//end coming-soon-countdown-background
+
+
+div.timer-wrap-outer.coming-soon-bg-timer {
+
+  background-color: $secondary-c;
+  //@include elem-border();
+  @include elem-border-side(top);
+  @include elem-border-side(bottom);
+  //border-color: $primary-c!important;
+
+  @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    margin-bottom: 0;
+    margin-top: -90px;
+    background-color: transparent;
+    border-color: $secondary-c!important;
+    border-bottom: none!important;
+
+    & * {
+      background: transparent!important;
+      border-color: $secondary-c!important;
+    }
+  }
+
+
+
+
+  .timer-wrap {
+    span {
+      background-color: $secondary-c;
+      @include elem-border();
+      @include border-side-hidden(top);
+      @include border-side-hidden(bottom);
+
+      @include media-breakpoint-down(sm) {
+        border: none!important;
+        &.sep {
+          background-color: transparent !important;
+          border: none!important;
+        }
+      }
+
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        border-color: $secondary-c;
+        color: $secondary-c!important;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+}//end coming-soon-bg-timer

@@ -1,0 +1,192 @@
+/*!
+ * [Fullscreen section - Table of contents]
+ * 1. Wrapper | #fullscreen
+ * 2. Call to action | .cta
+ */
+html.html-fs, body.body-fs {
+  height: 100%;
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+  }
+}
+
+@import "nav-style-2";
+
+section#fullscreen {
+
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-c;
+  text-align: center;
+  position: relative;
+  display: table;
+  @include elem-border-side(left);
+  @include elem-border-side(right);
+
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding: $elem-pad-px 0;
+  }
+
+  & > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    & > div {
+      width: 800px;
+      text-align: left;
+      position: relative;
+      display: inline-block;
+
+      @include media-breakpoint-down(sm) {
+        width: 90%;
+        text-align: center;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        width: 90%;
+      }
+
+      &:hover {
+        h1, h2, .cta {
+          border-color: $secondary-c!important;
+        }
+      }
+    }
+  }
+
+  h1, h2 {
+    color: $secondary-c;
+    background-color: $primary-c;
+    padding: 0 $elem-pad-px / 2;
+    display: inline-block;
+    width: auto;
+    @include elem-border();
+
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+
+  h1 {
+    font-size: 163px;
+    margin-bottom: 0;
+    position: relative;
+    line-height: 150px;
+    padding: 3px 29px 6px 17px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 70px;
+      margin-bottom: $elem-pad-px / 2;
+      padding: 0;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding: 3px 29px 13px 17px;
+    }
+  }
+
+
+  h2 {
+    font-size: $h2-fs;
+    padding: 20px 27px 20px 27px;
+    margin-top: -1px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: $h3-fs;
+      padding: $elem-pad-px / 2;
+      margin-bottom: $elem-pad-px / 2;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      font-size: 2.5em;
+    }
+  }
+
+
+  .cta {
+    position: relative;
+
+    @include elem-border();
+    display: inline-block!important;
+    width: 50%!important;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -1px;
+    background: $primary-c;
+    text-transform: uppercase;
+    font-size: $h5-fs;
+
+    br {
+      display: none;
+    }
+
+    @include prefix(transition-delay, .30s);
+
+    &, a, span {
+      outline: solid 1px transparent;
+      display: block;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      @include transition(outline .15s ease-in-out);
+    }
+
+    a {
+      @include prefix(transition-delay, .15s);
+
+      &:hover span {
+        background: $secondary-c;
+        color: $primary-c;
+      }
+    }
+
+    span {
+      outline: solid $border-width $secondary-c;
+      color: $secondary-c;
+    }
+
+    &:hover {
+      a {
+        outline: solid 1px $secondary-c;
+      }
+    }
+
+
+    @include media-breakpoint-down(sm) {
+      left: initial;
+      top: 0;
+      width: 100%!important;
+      display: inline-block!important;
+      position: relative;
+      margin: 0;
+      font-size: $base-fs;
+
+      span {
+        padding: 10px;
+      }
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      left: 54%;
+      margin-left: -28px;
+    }
+
+
+
+  }//end cta
+
+
+
+}//end fullscreen

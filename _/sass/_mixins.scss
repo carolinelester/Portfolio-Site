@@ -1,0 +1,170 @@
+
+
+
+
+//GENERIC VENDOR PREFIX MIXIN
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+//TRANSITION
+@mixin transition($values) {
+  -webkit-transition: $values;
+  -moz-transition: $values;
+  -o-transition: $values;
+  transition: $values;
+}
+
+//X-BROWSER BACKGROUND IMAGE
+@mixin cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed") {
+  background: url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin cover-background-linear($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed") {
+  background: linear-gradient(rgba(#000, .75), rgba(#000, .5)), url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment);
+  background: -webkit-linear-gradient(rgba(#000, .75), rgba(#000, .5)), url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+//X-BROWSER OPACITY:
+@mixin opacity($value-ie, $value, $important:null){
+  filter: alpha(opacity=$value-ie) $important;
+  -moz-opacity: $value $important;
+  -khtml-opacity: $value $important;
+  opacity: $value $important;
+}
+
+//Background gradient
+@mixin h3-bg-gradient(){
+  background: $primary-c;
+  background: -moz-linear-gradient(left, $primary-c 0%, #ffffff 92%);
+  background: -webkit-linear-gradient(left, $primary-c 0%,#ffffff 92%);
+  background: linear-gradient(to right, $primary-c 0%,#ffffff 92%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$black', endColorstr='#ffffff',GradientType=1 );
+}
+
+@mixin pseudo-icon($content){
+  content: $content;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin elem-border($important:null) {
+  border: $border-style $important;
+}
+
+@mixin elem-border-side($side, $important:null) {
+  border-#{$side}: $border-style $important;
+}
+
+@mixin border-side-hidden($side) {
+  border-#{$side}: $border-invisible;
+}
+
+
+@mixin elem-pad {
+  padding-top: $elem-pad-px;
+  padding-bottom: $elem-pad-px;
+}
+
+@mixin elem-hover($elem) {
+
+  cursor: pointer;
+
+  #{$elem}:after {
+    left: 100%;
+  }
+}
+
+
+@mixin elem-underline {
+  display: inline-block;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $primary-c;
+    @include transition(left .3s ease-in-out);
+  }
+}
+
+
+@mixin section-title {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 15px;
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 100%;
+    text-align: center;
+    @include prefix(transform, none);
+    padding: 30px 0;
+    
+    br {
+      display: none;
+    }
+  }
+}
+
+
+@mixin loading-elipsis {
+  &:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 1250ms infinite;
+    animation: ellipsis steps(4,end) 1250ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0;
+  }
+
+  @keyframes ellipsis {
+    to {
+      width: 1.25em;
+    }
+  }
+
+  @-webkit-keyframes ellipsis {
+    to {
+      width: 1.25em;
+    }
+  }
+}
+
+
+
+
+
+
+
+

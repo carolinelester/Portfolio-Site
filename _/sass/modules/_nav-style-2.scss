@@ -1,0 +1,173 @@
+/*!
+ * [Secondary Navigation - Table of contents]
+ * 1. Nav | .nav-fs
+ * 2. Nav items | ul.navlist
+ * 3. Contact | a.contact
+ * 4. Branding | .brand
+ */
+nav.nav-fs {
+
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: $primary-c;
+
+  div.navigation {
+    padding: 0;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+
+  ul.navlist {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+
+    li {
+      height: $elem-pad-px * 1.5;
+      line-height: $elem-pad-px * 1.5;
+      padding: 0 $elem-pad-px / 2;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: calc(100% / 4);
+      @include border-side-hidden(bottom);
+      @include elem-border-side(right);
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: center;
+      
+      &:last-child {
+        @include border-side-hidden(right);
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: $fs-sm;
+        padding: 0;
+      }
+
+      &:hover {
+        background: $secondary-c;
+
+        a {
+          color: $primary-c;
+        }
+      }
+
+      a {
+        color: $secondary-c;
+      }
+
+    }
+  }//end navlist
+
+
+  a.contact {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    text-align: center!important;
+    line-height: $elem-pad-px * 1.5;
+    height: $elem-pad-px * 1.5;
+  }
+
+
+  div.anchor.brand {
+
+    position: relative;
+
+    &:hover {
+      background-color: $secondary-c;
+
+      a {
+        color: $primary-c!important;
+      }
+
+      button#mobile-nav {
+        color: $primary-c!important;
+      }
+    }
+
+    a {
+      line-height: $elem-pad-px * 1.5;
+      height: $elem-pad-px * 1.5;
+      display: inline-block;
+      font-size: 1.65em;
+      color: $secondary-c;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.35em;
+      }
+    }
+
+
+    button#mobile-nav {
+      color: $secondary-c;
+      position: absolute;
+      right: $elem-pad-px / 2;
+      top: 10px;
+      padding: 0;
+      display: none;
+
+      &:focus, &:active {
+        outline: none;
+        @include prefix(box-shadow, none);
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+
+
+  } //end branding
+
+
+
+
+
+
+}//end nav 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,168 @@
+/*!
+ * [Gallery section - Table of contents]
+ * 1. Wrapper | #gallery
+ * 2. Left column | .carousel-wrap
+ * 3. Right column | .gallery-right
+ * 4. Carousel navigation | .owl-nav
+ */
+$gallery-h: 450px;
+$gallery-h-resp: auto!important;
+$gallery-h-xl: 600px;
+$gallery-h-xs: 300px;
+
+div#gallery {
+  height: $gallery-h;
+
+  @include media-breakpoint-down(md) {
+    height: $gallery-h-resp;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $gallery-h-xl;
+  }
+
+  @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+    @include elem-border-side(bottom);
+  }
+
+  & > div {
+    @include border-side-hidden(top);
+    @include border-side-hidden(bottom);
+
+    @include media-breakpoint-only(md) {
+      @include elem-border-side(top);
+      @include border-side-hidden(bottom);
+    }
+  }
+
+
+  h3 {
+    @include section-title;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &:hover .gallery-right {
+    background: $primary-c;
+
+    h3 {
+      color: $secondary-c;
+    }
+  }
+
+  .gallery-right {
+    @include media-breakpoint-down(md) {
+      @include elem-border-side(left);
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include border-side-hidden(left);
+      @include elem-border-side(bottom);
+    }
+  }
+
+  .carousel-wrap {
+
+    padding: 0;
+
+    .img-wrap {
+      overflow: hidden;
+      height: $gallery-h;
+
+
+      @include media-breakpoint-up(lg) {
+        height: $gallery-h-xl;
+      }
+
+      @include media-breakpoint-down(xs) {
+        height: $gallery-h-xs;
+      }
+
+      img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: $gallery-h;
+
+        @include media-breakpoint-up(lg) {
+          height: $gallery-h-xl;
+        }
+
+        @include media-breakpoint-down(xs) {
+          height: $gallery-h-xs;
+        }
+      }
+    }
+    
+    .owl-nav {
+      padding: 0;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+    
+    
+
+    .owl-prev, .owl-next {
+      width: auto;
+      height: auto;
+      line-height: 50px;
+      font-size: 30px;
+      position: absolute;
+      top: 50%;
+      display: block !important;
+      border: none;
+      margin: -15px;
+      background: transparent;
+      text-transform: uppercase;
+      padding: 0 8px;
+      background: $secondary-c;
+      color: $primary-c;
+      @include opacity(100, 1);
+      @include prefix(border-radius, 0);
+
+
+      @include media-breakpoint-down(xs) {
+        line-height: 40px;
+        margin: -20px auto 0;
+        font-size: $h4-fs;
+
+        &.owl-prev {
+          left: 0;
+        }
+
+        &.owl-next {
+          right: 0;
+        }
+      }
+
+      &:hover {
+        background: $primary-c;
+        color: $secondary-c;
+      }
+
+      &.disabled {
+        @include opacity(50, .5);
+
+        &:hover {
+          background: $secondary-c;
+          color: $primary-c;
+        }
+      }
+    }
+
+    .owl-prev {
+      left: 30px;
+    }
+
+    .owl-next {
+      right: 34px;
+    }
+  }//end carousel wrap
+}//end div#gallery
+
+
+

@@ -1,0 +1,212 @@
+/*!
+ * [Features section - Table of contents]
+ * 1. Wrapper | #features
+ * 2. Title | .features-title
+ * 3. Left column | .features-left
+ * 4. Right column | .features-right
+ */
+$feature-h: 462px;
+$feature-h-resp: 150px;
+$title-h: 90px;
+
+div#features {
+
+  @include elem-border-side(bottom);
+
+  @include media-breakpoint-down(xs) {
+    @include border-side-hidden(bottom);
+  }
+
+  h3 {
+    line-height: $title-h;
+    height: $title-h;
+
+    @include media-breakpoint-down(md) {
+      line-height: 1.2;
+      text-align: center;
+      width: 100%;
+      padding: 30px 0;
+      height: auto;
+    }
+  }
+
+  &:hover .features-title > div {
+    background: $primary-c;
+
+    h3 {
+      color: $secondary-c;
+    }
+  }
+
+
+  div.features-left, div.features-right {
+
+
+
+    &.features-left > div.elem-border > div:hover .btn-style-main {
+      outline: solid 1px $primary-c;
+
+      a {
+        outline: solid 1px $primary-c;
+      }
+    }
+
+    &.features-right > div:hover .btn-style-main {
+      outline: solid 1px $primary-c;
+
+      a {
+        outline: solid 1px $primary-c;
+      }
+    }
+
+    h4 {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }//end features left, right
+
+
+  div.features-left {
+
+    & > .row.elem-border {
+      height: 100%;
+    }
+    .btn-style-main {
+      margin-top: 9px;
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 0;
+      }
+    }
+
+    & > .row {
+
+      @include media-breakpoint-down(md) {
+        height: auto;
+      }
+
+      & > div {
+        position: relative;
+        @include elem-pad();
+        @include border-side-hidden(bottom);
+        @include border-side-hidden(right);
+
+        & + div {
+          @include elem-border-side(left);
+        }
+
+        @include media-breakpoint-down(md) {
+          @include elem-border();
+          @include border-side-hidden(bottom);
+
+
+          @if $border-width > 1 {
+            border-right-width: $border-width / 2;
+            @include elem-border-side(left);
+            & + div {
+              border-left-width: $border-width / 2;
+              border-right-width: $border-width;
+            }
+          } @else {
+            & + div {
+              @include border-side-hidden(left);
+            }
+          }
+
+          p {
+            margin-bottom: $elem-pad-px;
+          }
+        }//end mbp md
+
+        @include media-breakpoint-down(xs) {
+          @include border-side-hidden(left);
+          @include border-side-hidden(right);
+
+          & + div {
+            @include border-side-hidden(left);
+          }
+        }
+
+        &:hover {
+          @include elem-hover(a);
+          cursor: unset;
+        }
+      }
+    }
+  }//end features left
+
+
+  div.features-right {
+
+    height: 86%;
+    height: calc(100% - 92px);
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      height: calc(100% - 92px);
+    }
+
+    & > div {
+      position: relative;
+      @include elem-pad;
+      @include border-side-hidden(top);
+      @include border-side-hidden(bottom);
+
+
+      @include media-breakpoint-down(md) {
+        @if $border-width > 1 {
+          @include elem-border-side(left);
+          border-right-width: $border-width / 2;
+
+          &:last-child {
+            border-left-width: $border-width / 2;
+            border-right-width: $border-width;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include elem-border-side(bottom);
+      }
+
+
+      @include media-breakpoint-down(xs) {
+        @include border-side-hidden(left);
+        @include border-side-hidden(right);
+
+        &:last-child {
+          @include border-side-hidden(bottom);
+        }
+      }
+
+      p {
+        margin-bottom: $elem-pad-px;
+
+        span {
+          display: none;
+
+          @include media-breakpoint-down(xs) {
+            display: inline-block;
+          }
+        }
+      }
+
+      .btn-style-main {
+        margin-top: 0;
+      }
+
+
+
+      &:last-child {
+        @media(max-width: 320px) {
+          @include border-side-hidden(bottom);
+        }
+      }
+
+    }
+  }//end features right
+
+}//end features

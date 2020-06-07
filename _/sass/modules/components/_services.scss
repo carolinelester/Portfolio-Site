@@ -1,0 +1,206 @@
+/*!
+ * [Services section - Table of contents]
+ * 1. Wrapper | #services
+ * 2. Left column | .services-left
+ * 3. Center column | .services-center
+ * 4. Right column | .services-right
+ */
+$services-h: auto;
+$services-resp: auto;
+
+div#services {
+
+  height: $services-h;
+
+  @include media-breakpoint-down(md) {
+    height: $services-resp;
+  }
+
+  div.services-center {
+    position: relative;
+    @include elem-border-side(bottom);
+    @include elem-border-side(right);
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      @include border-side-hidden(right);
+    }
+
+    @include media-breakpoint-down(md) {
+      @include elem-border-side(top);
+      @include elem-border-side(left);
+      @include elem-border-side(right);
+      @include border-side-hidden(bottom);
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include border-side-hidden(right);
+      @include border-side-hidden(left);
+    }
+
+    @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+      @include elem-border-side(right);
+    }
+  }//end services center
+
+  h3 {
+   @include section-title;
+    left: 0;
+    width: 100%;
+  }
+
+  &:hover .services-center {
+    background: $primary-c;
+
+    h3 {
+      color: $secondary-c;
+    }
+  }
+
+  & > div {
+    @include elem-border-side(top);
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      @include border-side-hidden(top);
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include border-side-hidden(top);
+    }
+  }
+
+  h4 {
+    display: block;
+    margin-bottom: 15px;
+
+    br {
+      display: none;
+
+      @include media-breakpoint-down(xs) {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    @include elem-underline;
+  }
+
+  p {
+    margin-bottom: $elem-pad-px;
+    width: 50%;
+
+    @media(min-width: 768px) and (max-width: 1024px) {
+      width: 65%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  div.services-left, div.services-right {
+
+    @include media-breakpoint-down(md) {
+      height: $services-resp;
+    }
+
+    & > div {
+
+      cursor: pointer;
+      @include border-side-hidden(top);
+      @include elem-border-side(left);
+      @include elem-pad();
+
+
+      @include media-breakpoint-down(md) {
+        @include border-side-hidden(bottom);
+        @include elem-border-side(top);
+        @include elem-border-side(right);
+        border-right-width: $border-width / 2;
+
+        &:last-child {
+          border-left-width: $border-width / 2;
+          border-right-width: $border-width;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include border-side-hidden(bottom);
+        @include border-side-hidden(left);
+        @include elem-border-side(top);
+        @include elem-border-side(right);
+        border-right-width: $border-width / 2;
+
+        &:last-child {
+          @include elem-border-side(left);
+          border-left-width: $border-width / 2;
+          @include border-side-hidden(right);
+        }
+      }
+
+      @media(max-width: 320px) {
+        @include border-side-hidden(right);
+        @include border-side-hidden(left);
+
+        &:last-child {
+          @include border-side-hidden(left);
+        }
+      }
+
+      @media(max-width: 320px) {
+        display: block!important;
+        width: 100%;
+        max-width: none;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+      }
+
+      h4 {
+        @include media-breakpoint-down(md) {
+          height: auto;
+          line-height: 45px;
+        }
+      }
+
+      &:hover {
+        @include elem-hover(a);
+        cursor: unset;
+      }
+    }
+  }//end services l, r
+
+
+  div.services-right {
+
+    & > div {
+      @include border-side-hidden(left);
+
+      @include media-breakpoint-down(md) {
+        @include elem-border-side(left);
+
+        &:last-child {
+          border-right-width: $border-width;
+          border-left-width: $border-width / 2;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include border-side-hidden(left);
+
+        &:last-child {
+          border-right-width: $border-width;
+          border-left-width: $border-width / 2;
+        }
+      }
+
+      @media(max-width: 320px) {
+        @include border-side-hidden(right);
+        @include border-side-hidden(left);
+      }
+
+    }
+
+  }//end services right
+}//end div#services

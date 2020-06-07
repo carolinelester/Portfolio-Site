@@ -1,0 +1,100 @@
+/*!
+ * [Main Navigation - Table of contents]
+ * 1. Nav
+ * 2. H1
+ * 3. Nav items | ul.navlist
+ * 4. Contact | a.contact
+ */
+$nav-h: 150px;
+
+nav {
+
+  h1 {
+    font-size: 100px;
+    line-height: calc(#{$nav-h} + #{$border-width} *2);
+    width: 100%;
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    span.stretch_it {
+      display: inline-block;
+    }
+
+    @include media-breakpoint-down(xs) {
+      position: relative;
+      left: -6px;
+    }
+
+    @media(max-width: 320px) {
+      font-size: 82px;
+      left: -3px;
+    }
+  }
+
+  ul.navlist {
+    height: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
+
+    li {
+      height: calc(#{$nav-h} / 3);
+      line-height: calc(#{$nav-h} / 3);
+      padding: 0 15px;
+      box-sizing: content-box;
+      width: 100%;
+      @include elem-border-side(bottom);
+      text-transform: uppercase;
+
+      &:last-child {
+        @include border-side-hidden(bottom);
+      }
+
+      a {
+        display: block;
+      }
+
+    }
+  }
+
+  div.anchor {
+
+    &:hover a {
+      color: $secondary-c!important;
+    }
+
+    @include media-breakpoint-down(xs) {
+      @include border-side-hidden(top);
+
+      &.brand {
+        border-bottom: $bstyle $border-width $primary-c;
+      }
+    }
+  }
+
+  a.contact {
+    display: inline-block;
+    width: 100%;
+    height: calc(#{$nav-h} + #{$border-width} *2);
+    line-height: calc(#{$nav-h} + #{$border-width} *2);
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+
+
+    @include media-breakpoint-down(xs) {
+      height: calc(#{$nav-h} / 3);
+      line-height: calc(#{$nav-h} / 3);
+    }
+
+    @media(max-width: 320px) {
+      text-align: left;
+    }
+  }
+
+}//end nav

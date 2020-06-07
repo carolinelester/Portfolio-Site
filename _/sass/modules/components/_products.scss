@@ -1,0 +1,426 @@
+/*!
+ * [Products section - Table of contents]
+ * 1. Wrapper | #products
+ * 2. Title | .features-title
+ * 3. Left column | .products-left
+ * 4. Center column | .products-center
+ * 5. Right column | .products-right
+ * 6. Product container | .product-wrap
+ */
+$product_h: auto;
+$product_h-resp-xl: auto;
+$product_h-resp-md: auto;
+$product_h-resp-sm: auto;
+$product_h-resp-tab: auto;
+$product_h-resp-xs: auto;
+
+div#products {
+
+  @include elem-border-side(left);
+  @include elem-border-side(right);
+
+  @media(max-width: 767px) {
+    border-left: none;
+    border-right: none;
+    @include elem-border-side(top);
+  }
+
+  h3 {
+    @include section-title;
+    width: 100%;
+    left: 0;
+  }
+
+  div.products-title-carousel {
+    @media(max-width: 768px) and (orientation: portrait) {
+      display: none;
+    }
+  }
+
+  div.products-title-mobile {
+    display: none;
+
+    @media(max-width: 768px) and (orientation: portrait) {
+      display: block;
+    }
+  }//end products-title-mobile
+
+
+  div.products-center {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    @include elem-border-side(bottom);
+  }//end products center
+
+
+  &:hover .products-center{
+    background: $primary-c;
+
+    h3 {
+      color: $secondary-c;
+    }
+  }
+
+  .products-center:hover .products-left-outer div.product-wrap,
+  .products-center:hover .products-right-outer div.product-wrap {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background: rgba($secondary_c, .35) !important;
+    }
+  }
+
+  .products-left-outer, .products-right-outer {
+    &:hover {
+      div.product-wrap {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+          background: rgba($secondary_c, .35);
+        }
+      }
+    }
+
+    @media(max-width: 768px) and (orientation: portrait) {
+      display: none;
+    }
+  }
+
+  & > div {
+
+    border: none;
+    .row > div {
+
+      padding: 0;
+      
+      height: $product_h;
+      text-align: center;
+
+      @media(min-width: 1500px) {
+        height: $product_h;
+      }
+
+      @include media-breakpoint-down(md) {
+        height: $product_h;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        height: $product_h-resp-tab;
+        border-bottom-width: $border-width / 2;
+        @include border-side-hidden(bottom);
+      }
+
+      @include media-breakpoint-down(sm) {
+        height: $product_h;
+      }
+
+      @media(max-width: 320px) {
+        height: $product_h!important;
+      }
+
+      .product-wrap {
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: auto;
+          position: relative;
+          outline: solid 1px $primary-c;
+
+          @media(min-width: 1500px) {
+            height: $product_h-resp-xl;
+          }
+
+          @include media-breakpoint-only(md) {
+            height: $product_h-resp-md;
+            width: 100%;
+          }
+
+          @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            height: $product_h-resp-md;
+            vertical-align: top;
+          }
+
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            vertical-align: top;
+          }
+        }
+      }//end product wrap
+      
+      @include media-breakpoint-down(md) {
+        @include border-side-hidden(right);
+        @include elem-border-side(left);
+
+        &:last-child {
+          @include elem-border-side(right);
+        }
+
+        @if $border-width > 1 {
+          @include elem-border-side(right);
+        }
+
+        & + div {
+          @include elem-border-side(left);
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        @include border-side-hidden(left);
+        @include elem-border-side(bottom);
+      }
+
+    }//end row div
+
+
+    .row + .row img {
+      position: relative;
+      top: -1px;
+    }
+
+
+    div.product-wrap {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background: rgba($secondary_c, 0);
+      }
+
+      &:hover:before {
+        background: rgba($secondary_c, 0)!important;
+      }
+    }
+
+
+
+
+
+    .products-right {
+      & > div {
+        @include border-side-hidden(right);
+
+        @if $border-width > 1 {
+          @include media-breakpoint-down(md) {
+            @include elem-border-side(right);
+          }
+
+          @include media-breakpoint-only(md) {
+            height: calc(#{$product_h-resp-md} + #{$elem-pad-px} * 2 + #{$border-width});
+          }
+        }
+      }
+    }//end products right
+
+
+    .products-left {
+
+      & > div {
+        @include media-breakpoint-only(md) {
+          height: calc(#{$product_h-resp-md} + #{$elem-pad-px} * 2 + #{$border-width});
+        }
+      }
+
+      & + .products-left > div {
+        @include media-breakpoint-only(md) {
+          height: calc(#{$product_h-resp-md} + #{$elem-pad-px} * 2);
+        }
+      }
+
+      & > div:last-child {
+        @include border-side-hidden(right);
+
+        @include media-breakpoint-only(md) {
+          @include elem-border-side(right);
+        }
+      }
+    }//end products left
+
+
+    .row:last-child > div {
+      @include border-side-hidden(bottom);
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        @include elem-border-side(top);
+        border-top-width: $border-width / 2;
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include elem-border-side(bottom);
+      }
+    }
+  }
+
+
+  div.products-carousel {
+
+    width: 100%;
+    position: relative;
+    z-index: 50;
+
+    @media(max-width: 768px) and (orientation: portrait) {
+      @include elem-border-side(top);
+    }
+
+    &, .owl-stage-outer, .owl-stage, .owl-item, .product-carousel-item {
+      height: 100%;
+
+      @media(max-width: 767px) {
+        height: 400px;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        height: 450px;
+      }
+
+      @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+        height: 100%;
+      }
+    }
+
+
+
+    div.product-carousel-item {
+      position: relative;
+
+      background-color: $secondary-c;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: -1px;
+
+      .product-description {
+        position:  absolute;
+        left: 0;
+        right: 0;
+        text-align: left;
+        bottom: 0;
+        padding: 15px;
+        background: rgba($secondary-c, .85);
+        width: 65%;
+
+        @media(max-width: 768px) and (orientation: portrait) {
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          padding-bottom: 45px;
+          top: 0;
+        }
+      }
+
+      a.product-link {
+        display: none;
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        font-size: 30px;
+      }
+
+      h5 {
+        color: $primary_c;
+        margin-bottom: 8px;
+
+        @media(max-width: 768px) and (orientation: portrait) {
+          padding: 3px 5px;
+          display: inline-block;
+          background: $secondary-c;
+        }
+      }
+
+      p {
+        margin: 0;
+
+        @media(max-width: 768px) and (orientation: portrait) {
+          position: absolute;
+          bottom: 45px;
+          background: rgba($secondary-c, .85);
+          padding: 5px 8px;
+          width: calc(100% - 30px);
+          left: 15px;
+          display: inline-block;
+        }
+      }
+
+      .btn-style-main {
+        bottom: 0;
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }//end carousel item
+
+
+    div.owl-nav {
+
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      margin: 0;
+
+      @media(max-width: 768px) and (orientation: portrait) {
+        left: 0;
+        right: 0;
+        bottom: 7px;
+        text-align: center;
+      }
+      
+      & > div {
+        background: transparent;
+        margin: 0;
+        font-size: 30px;
+        @include opacity(100, 1);
+        color: $secondary_c;
+        @include prefix(border-radius, 0);
+
+        @media(max-width: 768px) and (orientation: portrait) {
+          line-height: 30px;
+          height: 30px;
+
+          span {
+            line-height: 19px;
+            display: block;
+            height: 30px;
+          }
+        }
+        
+        &:hover {
+          background: $secondary_c;
+          color: $primary_c;
+        }
+      }
+
+    }//end owl-nav
+
+
+  }//end products-carousel
+
+}//end div#products

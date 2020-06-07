@@ -1,0 +1,220 @@
+/*!
+ * [Coming soon background page - Table of contents]
+ * 1. Wrapper | #fullscreen.coming-soon-background
+ * 2. Fullscreen nav bar
+ */
+section#fullscreen.coming-soon-background {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  table-layout: fixed;
+
+  @media(max-width: 767px) {
+    padding-top: 30px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: $secondary-c;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      top: initial;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      top: initial;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+
+    @if $primary-c == #fff {
+      background-color: rgba($primary-c, .6);
+    } @else {
+      background-color: rgba($primary-c, .35);
+    }
+
+
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      height: 50%;
+      top: 0;
+      left: 0;
+      background-color: rgba($primary-c, .5);
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      width: 100%;
+      height: 50%;
+      top: 0;
+      left: 0;
+      background-color: rgba($primary-c, .5);
+    }
+
+  }
+
+
+  & > div {
+    position: relative;
+    z-index: 2;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+
+    & > div.container {
+      width: auto;
+      text-align: left;
+      position: relative;
+      display: inline-block;
+
+      h1, h2, h3, .cta {
+        border-color: $secondary-c!important;
+        background: transparent!important;
+
+        @include media-breakpoint-down(sm) {
+          color: $secondary-c!important;
+        }
+      }
+
+      h2, h3 {
+        font-weight: 300;
+      }
+
+      &:hover {
+        h1, h2, h3, .cta {
+          border-color: $secondary-c!important;
+          color: $secondary-c!important;
+        }
+
+        form.sub-form {
+          background: $primary-c;
+
+          h4 {
+            color: $secondary-c;
+          }
+
+          button.btn.btn-primary {
+            background: $secondary-c;
+          }
+        }
+      }//end hover
+    }
+  }
+
+
+  form.sub-form {
+    @include border-side-hidden(left);
+    @include elem-border();
+  }
+
+
+  p.coming-soon-contact {
+    bottom: 15px;
+    left: 15px;
+    right: initial;
+    width: auto;
+    text-align: left;
+
+    a {
+      color: $secondary-c;
+
+      &:before {
+        background-color: $secondary-c;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      left: 15px;
+      a {
+        color: $primary-c;
+
+        &:before {
+          background-color: $primary-c;
+        }
+      }
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      left: 15px;
+      padding-left: 15px;
+      a {
+        color: $primary-c;
+
+        &:before {
+          background-color: $primary-c;
+        }
+      }
+    }
+
+
+  }//end contact
+
+
+  p.coming-soon-copyright {
+    width: auto;
+    left: initial;
+    right: 0;
+    padding-right: 15px;
+  }
+
+
+  a.unsplash {
+    text-align: right;
+    display: block;
+    color: rgba($secondary-c, 0.25);
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 15px;
+    padding-top: 2px;
+
+    @media(max-width: 767px) {
+      position: relative;
+    }
+  }
+
+
+  div.sub-form-wrap {
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+      background-color: $secondary-c;
+    }
+  }
+
+
+  div.titles-wrap {
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      position: relative;
+      top: -60px;
+      overflow: hidden;
+    }
+  }
+
+}//end section coming soon background

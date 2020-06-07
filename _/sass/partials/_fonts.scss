@@ -1,0 +1,11 @@
+/*!
+ * [Fonts - Table of contents]
+ * 1. Import font from Google fonts | Titillium Web
+ * 2. Set font family to Titillium Web | h1, h2, h3, h4, h5, p, label, button, li, a, input, textarea
+ */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,900');
+$base-font: 'Titillium Web', sans-serif;
+
+h1, h2, h3, h4, h5, p, span, label, button, li, a, input, textarea, .owl-nav > div{
+  font-family: $base-font;
+}

@@ -1,0 +1,127 @@
+/*!
+ * [Video section - Table of contents]
+ * 1. Wrapper | #video
+ * 2. Left column | .video-left
+ * 3. Right column | #video-wrap
+ */
+$video-h: 100%;
+$video-h-resp: auto;
+
+div#video {
+  height: $video-h;
+
+  @include media-breakpoint-down(md) {
+    height: $video-h-resp;
+  }
+
+  & > div {
+    @include border-side-hidden(top);
+
+    @include media-breakpoint-only(md) {
+      @include elem-border-side(top);
+      @include border-side-hidden(bottom);
+    }
+  }
+
+
+  h3 {
+    @include section-title;
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &:hover div.video-left{
+    background: $primary-c;
+
+    h3 {
+      color: $secondary-c;
+    }
+  }
+
+  #video-wrap {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+
+    text-align: center;
+
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: $video-h;
+      min-height: 0;
+      min-width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      @include media-breakpoint-down(md) {
+        height: $video-h-resp;
+      }
+    }
+
+    p {
+      line-height: 50px;
+      font-size: 30px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: inline-block;
+      border: none;
+      margin: -25px auto 0;
+      background: transparent;
+      text-transform: uppercase;
+      z-index: 3;
+      width: auto;
+      max-width: 90px;
+      text-align: center;
+      cursor: pointer;
+      padding: 0 8px;
+      background: $secondary-c;
+      color: $primary-c;
+      @include opacity(100, 1);
+      @include prefix(border-radius, 0);
+
+      @include media-breakpoint-down(xs) {
+        max-width: 70px;
+        margin: 0 auto;
+        font-size: $h4-fs;
+        top: 50%;
+        margin-top: -25px;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        max-width: 120px;
+      }
+
+      &:hover {
+        background: $primary-c;
+        color: $secondary-c;
+      }
+    }
+
+    .owl-carousel .item-wrap {
+      position: relative;
+
+      &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 56.25%;
+      }
+
+      & > .item-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }//end vide wrap
+}//end #video

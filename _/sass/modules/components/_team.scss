@@ -1,0 +1,210 @@
+/*!
+ * [Team section - Table of contents]
+ * 1. Wrapper | #team
+ * 2. Left column | .team-left
+ * 3. Content wrapper | .team-member
+ * 4. Content container | .team-wrap
+ */
+$team-h: 240px;
+$team-h-resp: auto;
+
+div#team {
+
+  height: auto;
+
+  @include media-breakpoint-down(md) {
+    height: $team-h-resp;
+  }
+
+  h3 {
+    @include section-title;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  & > div {
+    @include border-side-hidden(top);
+
+    @include media-breakpoint-down(md) {
+      border: none;
+      @include elem-border-side(top);
+    }
+  }
+
+  &:hover .team-left {
+    background: $primary-c;
+
+    h3 {
+      color: $secondary-c;
+    }
+  }
+
+
+  //team left
+  div.team-left {
+    position: relative;
+    @include border-side-hidden(right);
+
+    @include media-breakpoint-only(md) {
+      @include elem-border-side(left);
+      @include elem-border-side(right);
+    }
+  }//end team left
+
+
+  div.team-carousel-wrap {
+    padding: 0;
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      @include elem-border-side(right);
+    }
+
+    div.team-carousel-nav {
+      height: 60px;
+      position: relative;
+      @include elem-border-side(top);
+      @include elem-border-side(left);
+    }
+
+    div.team-carousel .owl-nav {
+      position: absolute;
+      bottom: -60px;
+      width: 100%;
+      margin: 0;
+
+      & > div {
+        background: transparent;
+        margin: 0;
+        padding: 0 15px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+
+        & > span {
+          font-size: 30px;
+          line-height: 60px;
+          color: $primary-c;
+        }
+
+        &:hover {
+          background: $primary-c!important;
+
+          span {
+            color: $secondary-c;
+          }
+        }
+      }
+    }
+
+  }//end carousel wrap
+
+
+  //team members cols
+  div.team-member {
+
+    @include elem-border-side(left);
+
+    @include media-breakpoint-only(md) {
+      &:last-child {
+        @include elem-border-side(right);
+      }
+    }
+
+    @media(max-width: 767px) {
+      border-left: none;
+    }
+  }//end teammembers
+
+
+  div.team-wrap {
+
+    &:hover p > span {
+      background: $primary-c;
+      color: $secondary-c;
+    }
+
+    p {
+      position: relative;
+      width: 100%;
+      height: calc(#{$team-h} - #{$border-width});
+      margin-left: 0;
+
+      & > span {
+        position: absolute;
+
+        @if $border-width == 1 {
+          top: 84px;
+          left: -85px;
+        } @else {
+          top: calc(84px - #{$border-width});
+          left: calc(-85px + (#{$border-width} / 1.5));
+
+          @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            top: calc(84px - #{$border-width});
+          }
+        }
+
+        text-transform: uppercase;
+        @include prefix(transform, rotate(-90deg));
+        @include prefix(transform-origin, bottom);
+        @include elem-border-side(bottom);
+        width: $team-h;
+        padding: 5px 0 5px;
+        text-align: center;
+        display: block;
+
+        @include media-breakpoint-down(md) {
+          @include elem-border-side(top);
+        }
+      }
+    }
+
+
+    div {
+      position: absolute;
+      top: 45%;
+      @include elem-border();
+      @include prefix(border-radius, 100%);
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+      left: 35px;
+      right: 0;
+      margin: -75px auto 0;
+      overflow: hidden;
+
+      @include media-breakpoint-down(md) {
+        left: 35px;
+      }
+
+      img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -1px;
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+          height: auto;
+          top: 0;
+        }
+      }
+    }
+
+    span.team-member-name {
+      position: absolute;
+      display: block;
+      width: calc(100% - 35px);
+      text-align: center;
+      bottom: 15px;
+      left: 35px;
+    }
+  }//end team wrap
+
+}//end div#team
+
+
+

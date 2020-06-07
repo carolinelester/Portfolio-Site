@@ -1,0 +1,154 @@
+/*!
+ * [Preloader screen - Table of contents]
+ * 1. Wrapper | .preloader
+ */
+body.of-hidden {
+  overflow: hidden;
+}
+
+div.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: $secondary-c;
+  text-align: center;
+
+  div {
+    height: 80px;
+    position: relative;
+    top: 50%;
+    margin-top: -40px;
+  }
+
+  p {
+    font-size: $h3-fs;
+    text-transform: uppercase;
+    position: relative;
+    left: -2px;
+
+    span {
+      color: $secondary-c;
+
+      &.load-letter {
+        color: $primary-c;
+      }
+    }
+
+    & + p {
+      font-size: $p-fs;
+      color: $primary-c;
+      text-transform: none;
+      @include opacity(0, 0);
+      @include transition(opacity .3s ease-in-out);
+      top: -5px;
+
+
+      &.is-loaded {
+        @include opacity(100, 1);
+      }
+    }
+  }
+
+
+  &.preloader-lg {
+    p.loading-text {
+      font-size: 120px;
+      line-height: 120px;
+      margin-bottom: 15px;
+
+      @media(max-width: 767px) {
+        font-size: $h3-fs!important;
+        line-height: 30px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 90px!important;
+        line-height: 90px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        font-size: 180px;
+        line-height: 180px;
+      }
+    }
+
+    div {
+      height: 180px;
+      margin-top: -120px;
+
+      @media(max-width: 767px) {
+        height: 75px!important;
+        margin-top: -40px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        height: 160px!important;
+        margin-top: -110px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        height: 220px!important;
+        margin-top: -140px!important;
+      }
+    }
+  }//end preloader-lg
+
+
+
+  &.preloader-xl {
+    p.loading-text {
+      font-size: 240px;
+      line-height: 240px;
+      margin-bottom: 0;
+
+      @media(max-width: 767px) {
+        font-size: $h3-fs!important;
+        line-height: 60px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 120px!important;
+        line-height: 120px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        font-size: 130px!important;
+        line-height: 130px!important;
+      }
+    }
+
+    div {
+      height: 240px;
+      margin-top: -180px;
+
+      @media(max-width: 767px) {
+        height: 90px!important;
+        margin-top: -50px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        height: 160px!important;
+        margin-top: -110px!important;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        height: 160px!important;
+        margin-top: -90px!important;
+      }
+    }
+  }//end preloader-lg
+
+
+  &.preloader-off {
+    display: none !important;
+  }
+
+
+
+
+
+
+}//end preloader

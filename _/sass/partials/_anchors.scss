@@ -1,0 +1,23 @@
+/*!
+ * [Anchors - Table of contents]
+ * 1. Main anchor class | .btl-anchor
+ */
+a.btl-anchor {
+  position: relative;
+  display: inline-block;
+
+  &:hover:before {
+    height:3px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $primary-c;
+    @include transition(height .3s ease-in-out);
+  }
+}

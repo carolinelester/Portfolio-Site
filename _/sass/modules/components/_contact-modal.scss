@@ -1,0 +1,106 @@
+div.contact-modal {
+
+  div.modal-content {
+    @include prefix(border-radius, 0);
+    border: solid 4px $primary-c;
+  }
+
+  div.modal-header {
+    @include elem-border-side(bottom);
+    background-color: $secondary-c;
+  }
+
+  div.modal-body {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  div.modal-footer {
+    padding: 30px 15px 25px;
+    @include elem-border-side(top);
+    background: $secondary-c;
+
+    &:hover {
+      background: $secondary-c;
+
+      button.btn.btn-primary {
+        background: $primary-c;
+        color: $secondary-c;
+      }
+
+    }
+  }
+
+  label {
+    margin-top: 30px;
+    margin-bottom: 0;
+    background: $primary-c;
+    color: $secondary-c;
+    padding: 1px 10px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  form.contact-form {
+    padding-top: 0;
+    overflow: hidden;
+
+    span {
+      padding-top: 210px;
+
+      @media(min-width: 768px) and (max-width: 1024px) {
+        padding-top: 200px!important;
+      }
+    }
+  }
+
+  div.form-group {
+    text-align: right;
+    margin: 0;
+  }
+
+  button.btn.btn-primary, input[type="text"], input[type="email"] {
+    width: 100%;
+    color: $primary-c;
+    text-align: left;
+    height: 45px;
+
+    &:focus, &:active {
+      @include prefix(box-shadow,  0px 2px 0px 0px $primary-c);
+    }
+  }
+
+  textarea {
+    height: 120px;
+    margin-bottom: 15px!important;
+
+    &:focus, &:active {
+      @include prefix(box-shadow,  0px 2px 0px 0px $primary-c);
+    }
+  }
+
+
+  input[type="text"], input[type="email"], textarea {
+    @include elem-border(!important);
+    margin-bottom: 0;
+    outline: none!important;
+  }
+
+
+  button.btn.btn-primary {
+    background: $secondary-c;
+    color: $primary-c;
+    text-align: center;
+    @include elem-border(!important);
+    border-color: $primary-c;
+    margin-bottom: 0;
+
+    &:hover {
+      background: $primary-c;
+      color: $secondary-c;
+    }
+  }
+
+
+}//end contact-modal

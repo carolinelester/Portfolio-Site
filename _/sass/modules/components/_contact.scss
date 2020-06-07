@@ -1,0 +1,369 @@
+/*!
+ * [Contact section - Table of contents]
+ * 1. Wrapper | #contact
+ * 2. Left column | ul#social
+ * 3. Right column | .contact-right
+ * 4. Title | .contact-title
+ * 5. Contact form | form
+ */
+$contact-h: auto;
+$contact-h-resp: auto;
+
+div#contact {
+
+  height: $contact-h;
+
+  @include media-breakpoint-down(md) {
+    height: $contact-h-resp;
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      top: initial;
+      left: initial;
+      width: 100%;
+      text-align: center;
+      @include prefix(transform, none);
+      padding: 30px 0;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  & > div {
+    @include border-side-hidden(top);
+
+    @include media-breakpoint-down(md) {
+      border: none;
+      @include elem-border-side(top);
+    }
+  }
+
+  ul#social {
+    height: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      width: calc(100% + #{$elem-pad-px});
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin: 0;
+      width: 100%;
+    }
+
+    li {
+      height: calc(100% / 3 - #{$border-width} / 2);
+      padding: 0 calc(#{$elem-pad-px} / 2);
+      box-sizing: content-box;
+      width: 100%;
+      @include elem-border-side(bottom);
+      font-size: $h4-fs;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        height: auto;
+        line-height: initial;
+        padding: calc(#{$elem-pad-px} / 2) $elem-pad-px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        @include elem-border-side(left);
+        @include elem-border-side(right);
+      }
+
+      @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+        height: calc(100% / 3 - #{$border-width} / 2);
+        padding: 0 calc(#{$elem-pad-px} / 2);
+        box-sizing: content-box;
+        width: 100%;
+        @include elem-border-side(bottom);
+        font-size: $h4-fs;
+        cursor: pointer;
+      }
+
+
+      @include media-breakpoint-down(sm) {
+        height: 60px;
+        line-height: 60px;
+        width: calc(100% / 3);
+        display: inline-block;
+        vertical-align: top;
+        @include prefix(box-sizing, border-box);
+        text-align: center;
+        @include elem-border-side(right);
+        @include border-side-hidden(bottom);
+        &:last-child {
+          @include border-side-hidden(right);
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        font-size: $h5-fs;
+        height: auto;
+        line-height: 45px;
+        width: 100%;
+        display: block;
+        @include border-side-hidden(right);
+        @include elem-border-side(bottom);
+
+        &:last-child {
+          @include border-side-hidden(bottom);
+        }
+      }
+
+      &:hover {
+        background: $primary-c;
+        color: $secondary-c;
+      }
+
+      &:last-child {
+        @include border-side-hidden(bottom);
+
+        @include media-breakpoint-down(md) {
+          @include elem-border-side(bottom);
+        }
+
+        @include media-breakpoint-down(sm) {
+          @include border-side-hidden(bottom);
+        }
+      }
+    }
+  }//end contact
+
+
+  div.contact-right {
+    .row {
+      height: $contact-h;
+
+      @include media-breakpoint-down(md) {
+        height: $contact-h-resp;
+      }
+
+      & > div {
+        @include elem-border-side(right);
+
+        &:last-child {
+          @include border-side-hidden(right);
+
+          @include media-breakpoint-only(md) {
+            @include elem-border-side(right);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .contact-title {
+        background: $primary-c;
+        h3 {
+          color: $secondary-c;
+        }
+      }
+    }
+  }//end contact-right
+
+
+  .contact-title {
+
+    @include media-breakpoint-down(md) {
+      @include elem-border-side(left);
+    }
+
+    @include media-breakpoint-down(sm) {
+      background-color: $primary-c;
+      h3 {
+        color: $secondary-c;
+      }
+    }
+  }//end contact title
+
+
+  div.contact-left {
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      @include elem-border-side(bottom);
+    }
+  }//end contact left
+
+
+}//end div#contact
+
+
+form.contact-form {
+
+  padding-top: 25px;
+  position: relative;
+  background: $secondary-c;
+
+  @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    padding-top: 24px;
+  }
+
+  span {
+    color: $primary-c!important;
+  }
+
+  &.active-sending {
+    span.sending {
+      display: block;
+    }
+  }
+
+  span.sending {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: -15px;
+    right: -15px;
+    padding: 15px;
+    text-align: center;
+    padding-top: 120px;
+    background: rgba($secondary-c, .95);
+    display: none;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 22vh;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+      padding-top: 9vh!important;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding-top: 12vh;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      padding-top: 12vh;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      padding-top: 15vh;
+    }
+
+  }
+
+  &.active-sent {
+    span.sent {
+      display: block;
+    }
+  }
+
+  span.sent {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: -15px;
+    right: -15px;
+    padding: 15px;
+    text-align: center;
+    padding-top: 120px;
+    background: rgba($secondary-c, .95);
+    display: none;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 22vh;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+      padding-top: 9vh!important;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      padding-top: 12vh;
+    }
+
+    @media(min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      padding-top: 12vh;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      padding-top: 15vh;
+    }
+  }
+
+  label {
+    display: none;
+  }
+
+  textarea, input {
+    display: block;
+    @include elem-border(!important);
+    @include prefix(box-shadow, none);
+
+    &:active, &:focus {
+      outline: solid 4px $primary-c;
+    }
+  }
+
+  input {
+    display: inline-block;
+    width: calc(50% - 7px);
+    vertical-align: top;
+
+    & + input {
+      margin-left: 14px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      display: block;
+      width: 100%;
+
+      & + input {
+        margin: ($elem-pad-px / 2) 0 0 0;
+      }
+    }
+  }
+
+  textarea {
+    height: 115px;
+  }
+
+  button {
+    color: $primary-c;
+    @include prefix(box-shadow, none);
+    @include elem-border(!important);
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+
+    margin-bottom: calc(#{$elem-pad-px} / 2);
+    &:hover, &:active, &:focus {
+      background: $primary-c;
+      color: $secondary-c;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+//end form

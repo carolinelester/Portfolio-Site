@@ -1,0 +1,126 @@
+/*!
+ * [Fullscreen hero section - Table of contents]
+ * 1. Wrapper | #hero
+ */
+div#hero {
+
+
+  h2 {
+    margin-bottom: calc(#{$elem-pad-px} / 2);
+    display: block;
+
+    @include media-breakpoint-down(xs) {
+      span {
+        display: none;
+      }
+    }
+
+    @media(max-width: 320px) {
+      font-size: $h2-fs;
+      span {
+        white-space: nowrap!important;
+        display: inline-block;
+      }
+    }
+  }
+
+
+  h3 {
+    text-transform: none;
+    display: block;
+    text-transform: uppercase;
+
+    @media(max-width: 320px) {
+      font-size: $h3-fs;
+
+      span {
+        white-space: nowrap!important;
+      }
+    }
+  }
+
+
+  & > div {
+    @include border-side-hidden(top);
+    @include border-side-hidden(bottom);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include media-breakpoint-down(sm) {
+      @include elem-border-side(left);
+      @include elem-border-side(right);
+
+      & + div {
+        padding-top: 0;
+        padding-bottom: 45px;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      @include border-side-hidden(left);
+      @include border-side-hidden(right);
+    }
+  }
+
+
+
+  button, a.cta {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    width: calc(100% - 30px);
+    font-size: $h4-fs;
+    text-transform: uppercase;
+    background: $primary-c;
+    color: $secondary-c;
+    cursor: pointer;
+
+    br {
+      display: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: $elem-pad-px;
+      width: 100%;
+      font-size: $h5-fs;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+      font-size: $h5-fs;
+
+      br {
+        display: block;
+      }
+    }
+
+    &:hover{
+      span:after {
+        left: 100%;
+      }
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      top: calc(50% - 18px);
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $secondary-c;
+        @include transition(left .3s ease-in-out);
+      }
+    }
+
+    @media(max-width: 320px) {
+      br {
+        display: block;
+      }
+    }
+  }
+}//end div#hero
