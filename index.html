@@ -1,964 +1,1456 @@
 <!DOCTYPE html>
 <html lang="en" class="nightmode-off">
-<head>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Lester - A Personal Website</title>
+    <meta
+      name="description"
+      content="Caroline Lester Software Engineer Brutalist Full Stack Resume Website"
+    />
+    <meta
+      name="abstract"
+      content="Caroline Lester Software Engineer Brutalist Full Stack Resume Website"
+    />
+    <meta
+      name="keywords"
+      content="Caroline Lester Software Engineer Brutalist Full Stack Resume Website"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./favicon-16x16.png"
+      sizes="16x16"
+    />
 
-
-  <title>Lester - A Personal Website</title>
-  <meta name="description" content="A Brutalist HTML Template built with Bootstrap v4. Includes 2 Landing Pages, 2 Coming Soon Pages and 2 Countdown Pages with working contact and subscription forms.">
-  <meta name="abstract" content="A Brutalist HTML Template built with Bootstrap v4. Includes 2 Landing Pages, 2 Coming Soon Pages and 2 Countdown Pages with working contact and subscription forms.">
-  <meta name="keywords" content="Brutalist HTML 5 Template, Bootstrap v4, brutalist theme, website theme, brutalist website theme, brutalist website, website brutalism">
-  <meta name="author" content="MP Web - MichaelPalmerWebDesign.com">
-
-  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
-
-
-  <!--
+    <!--
     The Bootstrap scss (sass) files have been compiled into main.css / main.min.css to reduce the number of files
     loaded into the page and to improve speed. If you would like to use the main Bootstrap css files just uncomment the required files below.
   -->
 
-  <!--Bootstrap Compressed-->
-  <!--<link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
+    <!--Bootstrap Compressed-->
+    <!--<link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="./css/vendor/bootstrap-grid.min.css">
   <link rel="stylesheet" href="./css/vendor/bootstrap-reboot.min.css">-->
 
-  <!--Bootstrap Uncompressed-->
-  <!--<link rel="stylesheet" href="./css/vendor/bootstrap.css">
+    <!--Bootstrap Uncompressed-->
+    <!--<link rel="stylesheet" href="./css/vendor/bootstrap.css">
   <link rel="stylesheet" href="./css/vendor/bootstrap-grid.css">
   <link rel="stylesheet" href="./css/vendor/bootstrap-reboot.css">-->
 
-  <!--Owl Carousel base styles Compressed-->
-  <!--<link rel="stylesheet" href="./css/vendor/owl.carousel.min.css">-->
+    <!--Owl Carousel base styles Compressed-->
+    <!--<link rel="stylesheet" href="./css/vendor/owl.carousel.min.css">-->
 
-  <!--Owl Carousel base styles Uncompressed-->
-  <link rel="stylesheet" href="./css/vendor/owl.carousel.css">
+    <!--Owl Carousel base styles Uncompressed-->
+    <link rel="stylesheet" href="./css/vendor/owl.carousel.css" />
 
-  <!--Owl carousel default styles Compressed-->
-  <!--<link rel="stylesheet" href="./css/vendor/owl.theme.default.min.css">-->
+    <!--Owl carousel default styles Compressed-->
+    <!--<link rel="stylesheet" href="./css/vendor/owl.theme.default.min.css">-->
 
-  <!--Owl carousel default styles Uncompressed-->
-  <link rel="stylesheet" href="./css/vendor/owl.theme.default.css">
+    <!--Owl carousel default styles Uncompressed-->
+    <link rel="stylesheet" href="./css/vendor/owl.theme.default.css" />
 
-  <!--Nightmode - detects time at user location and sets / unsets nightmode-->
-  <script src="./js/nightmode.js"></script>
+    <!--Nightmode - detects time at user location and sets / unsets nightmode-->
+    <script src="./js/nightmode.js"></script>
 
-  <!--Main css compressed-->
-  <!--<link id="main-css" rel="stylesheet" href="./css/main.min.css">-->
+    <!--Main css compressed-->
+    <!--<link id="main-css" rel="stylesheet" href="./css/main.min.css">-->
 
-  <!--Main css uncompressed-->
-  <link id="main-css" rel="stylesheet" href="./css/main.css">
+    <!--Main css uncompressed-->
+    <link id="main-css" rel="stylesheet" href="./css/main.css" />
 
+    <!--Font styles-->
+    <!--<link rel="stylesheet" href="./css/font-styles/font-style-1.css">-->
+    <!--<link rel="stylesheet" href="./css/font-styles/font-style-2.css">-->
+    <!--<link rel="stylesheet" href="./css/font-styles/font-style-3.css">-->
+    <!--<link rel="stylesheet" href="./css/font-styles/font-style-4.css">-->
+    <!--<link rel="stylesheet" href="./css/font-styles/font-style-5.css">-->
+  </head>
 
-  <!--Font styles-->
-  <!--<link rel="stylesheet" href="./css/font-styles/font-style-1.css">-->
-  <!--<link rel="stylesheet" href="./css/font-styles/font-style-2.css">-->
-  <!--<link rel="stylesheet" href="./css/font-styles/font-style-3.css">-->
-  <!--<link rel="stylesheet" href="./css/font-styles/font-style-4.css">-->
-  <!--<link rel="stylesheet" href="./css/font-styles/font-style-5.css">-->
+  <body class="of-hidden">
+    <!--Modal-->
+    <div class="modal fade template-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Modal header-->
+          <div class="modal-header">
+            <!--Modal title-->
+            <h5 class="modal-title">This is the modal title.</h5>
 
+            <!--Modal close-->
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--end modal header-->
 
-</head>
+          <!--Modal body-->
+          <div class="modal-body">
+            <h6>Brutalist Websites.</h6>
+            <p>
+              In its ruggedness and lack of concern to look comfortable or easy,
+              Brutalism can be seen as a reaction by a younger generation to the
+              lightness, optimism, and frivolity of today's web design.
+            </p>
+          </div>
+          <!--End modal body-->
 
-<body class="of-hidden">
-
-	<!--Modal-->
-  <div class="modal fade template-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <!--Modal header-->
-        <div class="modal-header">
-
-          <!--Modal title-->
-          <h5 class="modal-title">This is the modal title.</h5>
-
-          <!--Modal close-->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--end modal header-->
-
-        <!--Modal body-->
-        <div class="modal-body">
-          <h6>Brutalist Websites.</h6>
-          <p>In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design.</p>
-        </div><!--End modal body-->
-
-        <!--Modal footer-->
-        <div class="modal-footer text-center">
-          <p>This is the modal footer.</p>
-        </div><!--end modal footer-->
-
-      </div><!--end modal content-->
+          <!--Modal footer-->
+          <div class="modal-footer text-center">
+            <p>This is the modal footer.</p>
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
+      </div>
     </div>
-  </div><!--end modal-->
+    <!--end modal-->
 
-  	<!--Modal-->
+    <!--Modal-->
     <div class="modal fade template-frontend" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-  
           <!--Modal header-->
           <div class="modal-header">
-  
             <!--Modal title-->
             <h5 class="modal-title">Front End Developer.</h5>
-  
+
             <!--Modal close-->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
-          </div><!--end modal header-->
-  
+          </div>
+          <!--end modal header-->
+
           <!--Modal body-->
           <div class="modal-body">
             <h6>Here's some of my strengths:</h6>
             <p>
-              <li>Implementing websites, mobile applications, and landing pages from concept through deployment with React and Angular.</li>
-              <li>Standardizing all output with a new, responsive, mobile-first approach and strategy.</li>
+              <li>
+                Implementing websites, mobile applications, and landing pages
+                from concept through deployment with React and Angular.
+              </li>
+              <li>
+                Standardizing all output with a new, responsive, mobile-first
+                approach and strategy.
+              </li>
               <li>Assessing UX and UI designs for technical feasibility.</li>
-              <li>Collaborating with product team members to implement new feature developments with Agile.</li>
+              <li>
+                Collaborating with product team members to implement new feature
+                developments with Agile.
+              </li>
             </p>
-          </div><!--End modal body-->
-  
+          </div>
+          <!--End modal body-->
+
           <!--Modal footer-->
           <div class="modal-footer text-center">
             <p>HTML, CSS, Javascript, Angular, React, Node.js</p>
-          </div><!--end modal footer-->
-  
-        </div><!--end modal content-->
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
       </div>
-    </div><!--end modal-->
-
-    	<!--Modal-->
-  <div class="modal fade template-backend" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <!--Modal header-->
-        <div class="modal-header">
-
-          <!--Modal title-->
-          <h5 class="modal-title">Backend Developer.</h5>
-
-          <!--Modal close-->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--end modal header-->
-
-        <!--Modal body-->
-        <div class="modal-body">
-          <h6>Experience in: </h6>
-          <p> 
-            <li>Connecting front end interfaces with server and database content in websites and apps.</li>
-            <li>Creating apps with API links using AJAX and JSON.</li>
-            <li>Using Node.js, MySQL or MongoDB to create a command line based store front that allows purchases from an inventory</li>
-            <li>Utilizing Source Code Managers like Git and cloud services like Azure to work on team projects.</li>
-          </p>
-        </div><!--End modal body-->
-
-        <!--Modal footer-->
-        <div class="modal-footer text-center">
-          <p>Firebase, mySQL, Node.js, Git, MongoDB, API's.</p>
-        </div><!--end modal footer-->
-
-      </div><!--end modal content-->
     </div>
-  </div><!--end modal-->
+    <!--end modal-->
 
-  	<!--Modal-->
+    <!--Modal-->
+    <div class="modal fade template-backend" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Modal header-->
+          <div class="modal-header">
+            <!--Modal title-->
+            <h5 class="modal-title">Backend Developer.</h5>
+
+            <!--Modal close-->
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--end modal header-->
+
+          <!--Modal body-->
+          <div class="modal-body">
+            <h6>Experience in:</h6>
+            <p>
+              <li>
+                Connecting front end interfaces with server and database content
+                in websites and apps.
+              </li>
+              <li>Creating apps with API links using AJAX and JSON.</li>
+              <li>
+                Using Node.js, MySQL or MongoDB to create a command line based
+                store front that allows purchases from an inventory
+              </li>
+              <li>
+                Utilizing Source Code Managers like Git and cloud services like
+                Azure to work on team projects.
+              </li>
+            </p>
+          </div>
+          <!--End modal body-->
+
+          <!--Modal footer-->
+          <div class="modal-footer text-center">
+            <p>Firebase, mySQL, Node.js, Git, MongoDB, API's.</p>
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
+      </div>
+    </div>
+    <!--end modal-->
+
+    <!--Modal-->
     <div class="modal fade template-uxui" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-  
           <!--Modal header-->
           <div class="modal-header">
-  
             <!--Modal title-->
             <h5 class="modal-title">User Experience & User Interface.</h5>
-  
+
             <!--Modal close-->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
-          </div><!--end modal header-->
-  
+          </div>
+          <!--end modal header-->
+
           <!--Modal body-->
           <div class="modal-body">
-            <h6>Talent's Include: </h6>
+            <h6>Talent's Include:</h6>
             <p>
-              <li>Creating interfaces that work for multi-generational users form Gen-X to Boomers </li>
-              <li>Working well with a team to create a shared vision when redesigning products</li>
-              <li>Embracing experimentation and new ideas without the fear of being wrong</li>
-              <li>Prototyping fun and modern designs that are approachable and efficient</li>
+              <li>
+                Creating interfaces that work for multi-generational users form
+                Gen-X to Boomers
+              </li>
+              <li>
+                Working well with a team to create a shared vision when
+                redesigning products
+              </li>
+              <li>
+                Embracing experimentation and new ideas without the fear of
+                being wrong
+              </li>
+              <li>
+                Prototyping fun and modern designs that are approachable and
+                efficient
+              </li>
             </p>
-          </div><!--End modal body-->
-  
+          </div>
+          <!--End modal body-->
+
           <!--Modal footer-->
           <div class="modal-footer text-center">
             <p>Figma, Canva, Adobe Creative, Javascript Animation</p>
-          </div><!--end modal footer-->
-  
-        </div><!--end modal content-->
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
       </div>
-    </div><!--end modal-->
+    </div>
+    <!--end modal-->
 
-  	<!--Modal-->
+    <!--Modal-->
     <div class="modal fade template-mobile" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-  
           <!--Modal header-->
           <div class="modal-header">
-  
             <!--Modal title-->
             <h5 class="modal-title">Mobile Web Design</h5>
-  
+
             <!--Modal close-->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
-          </div><!--end modal header-->
-  
+          </div>
+          <!--end modal header-->
+
           <!--Modal body-->
           <div class="modal-body">
-            <h6>Here's some strengths: </h6>
+            <h6>Here's some strengths:</h6>
             <p>
-              <li>Creating smooth website page transition, simple animations and unique typography to create an aesthetically appealing online experience </li>
-              <li>Working with touch screen technologies when creating training apps for the iPad</li>
-              <li>Designing and creating websites and apps with creative appearance but useful simplicity</li>
-              <li>Standardizing website formats for every screen size. </li>
+              <li>
+                Creating smooth website page transition, simple animations and
+                unique typography to create an aesthetically appealing online
+                experience
+              </li>
+              <li>
+                Working with touch screen technologies when creating training
+                apps for the iPad
+              </li>
+              <li>
+                Designing and creating websites and apps with creative
+                appearance but useful simplicity
+              </li>
+              <li>Standardizing website formats for every screen size.</li>
             </p>
-          </div><!--End modal body-->
-  
+          </div>
+          <!--End modal body-->
+
           <!--Modal footer-->
           <div class="modal-footer text-center">
             <p></p>
-          </div><!--end modal footer-->
-  
-        </div><!--end modal content-->
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
       </div>
-    </div><!--end modal-->
+    </div>
+    <!--end modal-->
 
-
-  	<!--Modal-->
+    <!--Modal-->
     <div class="modal fade template-travel" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-  
           <!--Modal header-->
           <div class="modal-header">
-  
             <!--Modal title-->
             <h5 class="modal-title">Travel.</h5>
-  
+
             <!--Modal close-->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
-          </div><!--end modal header-->
-  
+          </div>
+          <!--end modal header-->
+
           <!--Modal body-->
           <div class="modal-body">
             <h6>Around the world in 25 years --</h6>
-            <p>I believe it's incredibly rewarding to be able to experince each and every culture and climate in this vast world. I will soon hit my goal of visiting 25 countries before I turn 25. Some of my favorite spots around the globe are linked below. Check them out!</p>
-          </div><!--End modal body-->
-  
+            <p>
+              I believe it's incredibly rewarding to be able to experince each
+              and every culture and climate in this vast world. I will soon hit
+              my goal of visiting 25 countries before I turn 25. Some of my
+              favorite spots around the globe are linked below. Check them out!
+            </p>
+          </div>
+          <!--End modal body-->
+
           <!--Modal footer-->
           <div class="modal-footer text-center">
             <p></p>
-          </div><!--end modal footer-->
-  
-        </div><!--end modal content-->
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
       </div>
-    </div><!--end modal-->
-
-    	<!--Modal-->
-  <div class="modal fade template-food" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <!--Modal header-->
-        <div class="modal-header">
-
-          <!--Modal title-->
-          <h5 class="modal-title">Food.</h5>
-
-          <!--Modal close-->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--end modal header-->
-
-        <!--Modal body-->
-        <div class="modal-body">
-          <h6>Lester the pastry chef.</h6>
-          <p>If we lived in an alternate universe where realities and responsibilities didn't matter, I've always had this daydream where I run off to the south of France with one mission in mind: learn to cook an absolutely stunning pastry. Food is one of the best parts of life so eat well and eat often. </p>
-        </div><!--End modal body-->
-
-        <!--Modal footer-->
-        <div class="modal-footer text-center">
-          <p>Lester's favorites: brunch, tacos and Thai</p>
-        </div><!--end modal footer-->
-
-      </div><!--end modal content-->
     </div>
-  </div><!--end modal-->
+    <!--end modal-->
 
-  	<!--Modal-->
+    <!--Modal-->
+    <div class="modal fade template-food" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Modal header-->
+          <div class="modal-header">
+            <!--Modal title-->
+            <h5 class="modal-title">Food.</h5>
+
+            <!--Modal close-->
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--end modal header-->
+
+          <!--Modal body-->
+          <div class="modal-body">
+            <h6>Lester the pastry chef.</h6>
+            <p>
+              If we lived in an alternate universe where realities and
+              responsibilities didn't matter, I've always had this daydream
+              where I run off to the south of France with one mission in mind:
+              learn to cook an absolutely stunning pastry. Food is one of the
+              best parts of life so eat well and eat often.
+            </p>
+          </div>
+          <!--End modal body-->
+
+          <!--Modal footer-->
+          <div class="modal-footer text-center">
+            <p>Lester's favorites: brunch, tacos and Thai</p>
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
+      </div>
+    </div>
+    <!--end modal-->
+
+    <!--Modal-->
     <div class="modal fade template-art" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-  
           <!--Modal header-->
           <div class="modal-header">
-  
             <!--Modal title-->
             <h5 class="modal-title">Art.</h5>
-  
+
             <!--Modal close-->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
-          </div><!--end modal header-->
-  
+          </div>
+          <!--end modal header-->
+
           <!--Modal body-->
           <div class="modal-body">
             <h6>Modern art, Classic art, Virtual art -- I like it all.</h6>
-            <p>I've made it my mission to explore every major art museum in the world. I've slowly knocked quite a few off my list with my favorites including: The MICO in Amsterdam, the Prado Museum in Madrid, the Tate Modern in London, the Art Institute in Chicago, Musee du Louvre in Paris and lastly the Met in NYC.</p>
-          </div><!--End modal body-->
-  
+            <p>
+              I've made it my mission to explore every major art museum in the
+              world. I've slowly knocked quite a few off my list with my
+              favorites including: The MICO in Amsterdam, the Prado Museum in
+              Madrid, the Tate Modern in London, the Art Institute in Chicago,
+              Musee du Louvre in Paris and lastly the Met in NYC.
+            </p>
+          </div>
+          <!--End modal body-->
+
           <!--Modal footer-->
           <div class="modal-footer text-center">
-            <p>I'd recommend checking out Jacques-Louis David's section of the Louvre.</p>
-          </div><!--end modal footer-->
-  
-        </div><!--end modal content-->
-      </div>
-    </div><!--end modal-->
-
-    	<!--Modal-->
-  <div class="modal fade template-music" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-        <!--Modal header-->
-        <div class="modal-header">
-
-          <!--Modal title-->
-          <h5 class="modal-title">Music.</h5>
-
-          <!--Modal close-->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--end modal header-->
-
-        <!--Modal body-->
-        <div class="modal-body">
-          <h6>"Never trust a DJ who can't dance."</h6>
-          <p>Music is an incredible unifying force regardless of language or culture. Here's my recommendations: Bicep, Tale of Us, Four Tet, DJ Seinfeld, Ross from Friends, Dixon, Ame.</p>
-        </div><!--End modal body-->
-
-        <!--Modal footer-->
-        <div class="modal-footer text-center">
-          <p></p>
-        </div><!--end modal footer-->
-
-      </div><!--end modal content-->
-    </div>
-  </div><!--end modal-->
-
-  <!--preloader-->
-  <div class="preloader preloader-xl">
-    <div>
-      <p class="loading-text">
-        <span>L</span>
-        <span>e</span>
-        <span>s</span>
-        <span>t</span>
-        <span>e</span>
-        <span>r</span>
-      </p>
-      <p>will be with you shortly...</p>
-    </div>
-  </div>
-
-
-  <!--nav-->
-  <nav class="container-fluid">
-    <div class="row elem-border">
-      <div class="col-sm-8 anchor brand">
-        <h1 class="stretch-text"><a href="/">
-          <span class="stretch_it">LESTER</span>
-        </a></h1>
-      </div>
-      <div class="col-sm-2 navigation">
-        <ul class="navlist">
-          <li class="anchor"><a href="#features">Skills</a></li><!--
-          --><li class="anchor"><a href="#services">Personality</a></li><!--
-          --><li class="anchor"><a href="#prices">Education</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-2 anchor">
-        <a class="contact" href="#contact">Contact</a>
+            <p>
+              I'd recommend checking out Jacques-Louis David's section of the
+              Louvre.
+            </p>
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
       </div>
     </div>
-  </nav><!--end nav-->
+    <!--end modal-->
 
+    <!--Modal-->
+    <div class="modal fade template-music" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Modal header-->
+          <div class="modal-header">
+            <!--Modal title-->
+            <h5 class="modal-title">Music.</h5>
 
-  <!--main-->
-  <div class="container-fluid">
+            <!--Modal close-->
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--end modal header-->
 
+          <!--Modal body-->
+          <div class="modal-body">
+            <h6>"Never trust a DJ who can't dance."</h6>
+            <p>
+              Music is an incredible unifying force regardless of language or
+              culture. Here's my recommendations: Bicep, Tale of Us, Four Tet,
+              DJ Seinfeld, Ross from Friends, Dixon, Ame.
+            </p>
+          </div>
+          <!--End modal body-->
 
-    <!--tagline-->
-    <div id="hero" class="row elem-border">
-      <div class="col-xl-4 col-lg-5 col-md-7">
-        <h2 class="stretch-text"><span>Developer</span></h2>
-        <h3 class="stretch-text"><span>SCRUM Master</span></h3>
+          <!--Modal footer-->
+          <div class="modal-footer text-center">
+            <p></p>
+          </div>
+          <!--end modal footer-->
+        </div>
+        <!--end modal content-->
       </div>
-      <div class="col-xl-8 col-lg-7 col-md-5 text-center">
-        <a class="cta" target="_blank" href="https://drive.google.com/file/d/1zJYxh_6pbGDPvHZF-ENVgH5w6xqtmkvR/view?usp=sharing">
-          <span>Download my Resume</span>
-        </a>
+    </div>
+    <!--end modal-->
+
+    <!--preloader-->
+    <div class="preloader preloader-xl">
+      <div>
+        <p class="loading-text">
+          <span>L</span>
+          <span>e</span>
+          <span>s</span>
+          <span>t</span>
+          <span>e</span>
+          <span>r</span>
+        </p>
+        <p>will be with you shortly...</p>
       </div>
-    </div><!--endtagline-->
+    </div>
 
+    <!--nav-->
+    <nav class="container-fluid">
+      <div class="row elem-border">
+        <div class="col-sm-8 anchor brand">
+          <h1 class="stretch-text">
+            <a href="/">
+              <span class="stretch_it">LESTER</span>
+            </a>
+          </h1>
+        </div>
+        <div class="col-sm-2 navigation">
+          <ul class="navlist">
+            <li class="anchor"><a href="#features">Skills</a></li>
+            <!--
+          -->
+            <li class="anchor"><a href="#services">Personality</a></li>
+            <!--
+          -->
+            <li class="anchor"><a href="#prices">Education</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2 anchor">
+          <a class="contact" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!--end nav-->
 
-    <!--features-->
-    <div id="features" class="row">
-      <div class="col-lg-6 col-md-12 features-left order-2 order-sm-2">
-        <div class="row elem-border">
-          <div class="col-xl-12 col-lg-12 col-md-6">
-            <div class="row">
-              <div class="col-lg-6">
-                <h4>Front End Development</h4>
-                <p>I have experience designing, developing, and managing complex sites and internal frameworks with responsive design. </p>
+    <!--main-->
+    <div class="container-fluid">
+      <!--tagline-->
+      <div id="hero" class="row elem-border">
+        <div class="col-xl-4 col-lg-5 col-md-7">
+          <h2 class="stretch-text"><span>Developer</span></h2>
+          <h3 class="stretch-text"><span>SCRUM Master</span></h3>
+        </div>
+        <div class="col-xl-8 col-lg-7 col-md-5 text-center">
+          <a
+            class="cta"
+            target="_blank"
+            href="https://drive.google.com/file/d/1zJYxh_6pbGDPvHZF-ENVgH5w6xqtmkvR/view?usp=sharing"
+          >
+            <span>Download my Resume</span>
+          </a>
+        </div>
+      </div>
+      <!--endtagline-->
+
+      <!--features-->
+      <div id="features" class="row">
+        <div class="col-lg-6 col-md-12 features-left order-2 order-sm-2">
+          <div class="row elem-border">
+            <div class="col-xl-12 col-lg-12 col-md-6">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4>Front End Development</h4>
+                  <p>
+                    I have experience designing, developing, and managing
+                    complex sites and internal frameworks with responsive
+                    design.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-right">
+                  <div class="btn-style-main">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target=".template-frontend"
+                    >
+                      <span>Read more</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-6 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-frontend">
-                    <span>Read more</span>
-                  </a>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-6">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4>Back End Development</h4>
+                  <p>
+                    I have experience in development of server-side logic,
+                    maintenance of the databases, and ensuring high performance
+                    and responsiveness to requests from the front-end design.
+                  </p>
+                </div>
+                <div class="col-lg-6 text-right">
+                  <div class="btn-style-main">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target=".template-backend"
+                    >
+                      <span>Read more</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-12 col-lg-12 col-md-6">
-            <div class="row">
-              <div class="col-lg-6">
-                <h4>Back End Development</h4>
-                <p>I have experience in development of server-side logic, maintenance of the databases, and ensuring high performance and responsiveness to requests from the front-end design.</p>
+        </div>
+        <div class="col-lg-6 col-md-12 order-1 order-lg-2 order-sm-1">
+          <div class="row elem-border features-title">
+            <div class="col-12">
+              <h3>Here are my skills</h3>
+            </div>
+          </div>
+
+          <div class="row elem-border features-right">
+            <div class="col-lg-6 col-md-6">
+              <div class="row">
+                <div class="col-12">
+                  <h4>UX UI</h4>
+                  <p>
+                    My theory is the web should be sleek, beautiful and modern
+                    but my 76 year old grandma should still be easily able
+                    navigate it.
+                  </p>
+                </div>
+                <div class="col-12 text-right">
+                  <div class="btn-style-main">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target=".template-uxui"
+                    >
+                      <span>Read more</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-6 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-backend">
-                    <span>Read more</span>
-                  </a>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="row">
+                <div class="col-12">
+                  <h4>Responsive Design</h4>
+                  <p>
+                    We live in a world where everyone has multiple devices
+                    therefore your ideas should be uniform across any
+                    screensize.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-right">
+                  <div class="btn-style-main">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target=".template-mobile"
+                    >
+                      <span>Read more</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 order-1 order-lg-2 order-sm-1">
+      <!--end features-->
 
-        <div class="row elem-border features-title">
-          <div class="col-12">
-            <h3>Here are my skills</h3>
-          </div>
-        </div>
-
-        <div class="row elem-border features-right">
-          <div class="col-lg-6 col-md-6">
-            <div class="row">
-              <div class="col-12">
-                <h4>UX UI</h4>
-                <p>My theory is the web should be sleek, beautiful and modern but my 76 year old grandma should still be easily able navigate it.</p>
+      <!--products-->
+      <div id="products" class="row elem-border">
+        <div
+          class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2 products-left-outer"
+        >
+          <div class="row products-left">
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="1">
+                <img src="./img/coast.png" alt="coastisclear" />
               </div>
-              <div class="col-12 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-uxui">
-                    <span>Read more</span>
-                  </a>
-                </div>
+            </div>
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="2">
+                <img src="./img/savannahwedding.png" alt="wedding1" />
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="row">
-              <div class="col-12">
-                <h4>Responsive Design</h4>
-                <p>We live in a world where everyone has multiple devices therefore your ideas should be uniform across any screensize.</p>
+          <div class="row products-left">
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="3">
+                <img src="./img/liri.png" alt="liri" />
               </div>
             </div>
-            <div class="row">
-              <div class="col-12 text-right">
-                <div class="btn-style-main">
-                    <a href="#" data-toggle="modal" data-target=".template-mobile">
-                    <span>Read more</span>
-                  </a>
-                </div>
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="4">
+                <img src="./img/tiger.png" alt="tigerking" />
               </div>
             </div>
           </div>
         </div>
 
-      </div>
-    </div><!--end features-->
-
-
-    <!--products-->
-    <div id="products" class="row elem-border">
-
-      <div class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2 products-left-outer">
-        <div class="row products-left">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="1">
-              <img src="./img/coast.png" alt="coastisclear">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="2">
-              <img src="./img/savannahwedding.png" alt="wedding1">
-            </div>
-          </div>
-        </div>
-        <div class="row products-left">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="3">
-              <img src="./img/liri.png" alt="liri">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="4">
-              <img src="./img/tiger.png" alt="tigerking">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center products-center">
-
+        <div
+          class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center products-center"
+        >
           <div class="products-title-mobile">
-              <h3>Here are<br/> projects</h3>
+            <h3>
+              Here are<br />
+              projects
+            </h3>
           </div>
 
           <div class="products-carousel owl-carousel owl-theme">
-
-              <div class="products-title-carousel">
-                  <h3>Here are<br/> projects</h3>
-              </div>
-
-              <div id="product-1" class="product-carousel-item" style="background-image: url(./img/coast.png);">
-                  <div class="product-description">
-                      <h5>Coast is Clear App</h5>
-                      <p>HTML, CSS, API, JSON, AJAX, JavaScript. <a href="https://github.com/carolinelester/coast-is-clear" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/coast-is-clear/" target="_blank">Click here for Website.</a></p>
-
-                      <a href="https://carolinelester.github.io/coast-is-clear/" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-2" class="product-carousel-item" style="background-image: url(./img/savannahwedding.png);">
-                  <div class="product-description">
-                      <h5>Savannah Wedding Site</h5>
-                      <p>HTML, CSS, Javascript, Widgets, API. <a href="https://github.com/carolinelester/bradley-savannah-wedding" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/bradley-savannah-wedding/" target="_blank">Click here for Website.</a></p>
-
-                      <a href="https://carolinelester.github.io/bradley-savannah-wedding/" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-3" class="product-carousel-item" style="background-image: url(./img/liri.png);">
-                  <div class="product-description">
-                      <h5>Liri Bot</h5>
-                      <p>Javascript, Node.js. <a href="https://github.com/carolinelester/LIRI-bot" target="_blank">Click here for the Code. </a></p>
-
-                      <a href="https://github.com/carolinelester/LIRI-bot" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-4" class="product-carousel-item" style="background-image: url(./img/tiger.png);">
-                  <div class="product-description">
-                      <h5>Tiger King Hangman</h5>
-                      <p>HTML, CSS, Javascript. <a href="https://github.com/carolinelester/Word-Guess-Game" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/Word-Guess-Game/" target="_blank">Click here for Website.</a></p>
-
-                      <a href="https://carolinelester.github.io/Word-Guess-Game/" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-5" class="product-carousel-item" style="background-image: url(./img/GOT.png);">
-                  <div class="product-description">
-                      <h5>GOT Trivia</h5>
-                      <p>HTML, Bootstrap, CSS, JQuery. <a href="https://github.com/carolinelester/Trivia-Game" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/Trivia-Game/" target="_blank">Click here for Website.</a></p>
-                      <a href="https://carolinelester.github.io/Trivia-Game/" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-6" class="product-carousel-item" style="background-image: url(./img/train.png);">
-                  <div class="product-description">
-                      <h5>Train Scheduler</h5>
-                      <p>HTML, Bootstrap, Firebase, Javascript. <a href="https://github.com/carolinelester/Train-Scheduler" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/Train-Scheduler/" target="_blank">Click here for Website.</a></p>
-
-                      <a href="https://carolinelester.github.io/Train-Scheduler/" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
-              </div>
-
-              <div id="product-7" class="product-carousel-item" style="background-image: url(./img/tulumwedding.png);">
-                <div class="product-description">
-                    <h5>Tulum Wedding Website</h5>
-                    <p>HTML, CSS and Javascript. <a href="https://github.com/carolinelester/bradley-tulum-wedding" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/bradley-tulum-wedding/" target="_blank">Click here for Website.</a></p>
-
-                    <a href="https://carolinelester.github.io/bradley-tulum-wedding/" target="_blank" class="product-link">
-                        &rarr;
-                    </a>
-                </div>
+            <div class="products-title-carousel">
+              <h3>
+                Here are<br />
+                projects
+              </h3>
             </div>
 
-              <div id="product-8" class="product-carousel-item" style="background-image: url(./img/2000.png);">
-                  <div class="product-description">
-                      <h5>2000's Icon's GIF Generator</h5>
-                      <p>HTML, CSS, Javascript, API. <a href="https://github.com/carolinelester/2000sGifGenerator" target="_blank">Click here for the Code. </a><a href="https://carolinelester.github.io/2000sGifGenerator/" target="_blank">Click here for Website.</a></p>
+            <div
+              id="product-1"
+              class="product-carousel-item"
+              style="background-image: url(./img/coast.png)"
+            >
+              <div class="product-description">
+                <h5>Coast is Clear App</h5>
+                <p>
+                  HTML, CSS, API, JSON, AJAX, JavaScript.
+                  <a
+                    href="https://github.com/carolinelester/coast-is-clear"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/coast-is-clear/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
 
-                      <a href="https://carolinelester.github.io/2000sGifGenerator/" target="_blank" class="product-link">
-                          &rarr;
-                      </a>
-                  </div>
+                <a
+                  href="https://carolinelester.github.io/coast-is-clear/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
               </div>
-
-          </div>
-      </div>
-
-      <div class="col-lg-4 col-md-12 order-3 products-right-outer">
-        <div class="row products-right">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="5">
-              <img src="./img/GOT.png" alt="">
             </div>
-          </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="6">
-              <img src="./img/train.png" alt="">
+
+            <div
+              id="product-2"
+              class="product-carousel-item"
+              style="background-image: url(./img/savannahwedding.png)"
+            >
+              <div class="product-description">
+                <h5>Savannah Wedding Site</h5>
+                <p>
+                  HTML, CSS, Javascript, Widgets, API.
+                  <a
+                    href="https://github.com/carolinelester/bradley-savannah-wedding"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/bradley-savannah-wedding/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
+
+                <a
+                  href="https://carolinelester.github.io/bradley-savannah-wedding/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="product-3"
+              class="product-carousel-item"
+              style="background-image: url(./img/liri.png)"
+            >
+              <div class="product-description">
+                <h5>Liri Bot</h5>
+                <p>
+                  Javascript, Node.js.
+                  <a
+                    href="https://github.com/carolinelester/LIRI-bot"
+                    target="_blank"
+                    >Click here for the Code.
+                  </a>
+                </p>
+
+                <a
+                  href="https://github.com/carolinelester/LIRI-bot"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="product-4"
+              class="product-carousel-item"
+              style="background-image: url(./img/tiger.png)"
+            >
+              <div class="product-description">
+                <h5>Tiger King Hangman</h5>
+                <p>
+                  HTML, CSS, Javascript.
+                  <a
+                    href="https://github.com/carolinelester/Word-Guess-Game"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/Word-Guess-Game/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
+
+                <a
+                  href="https://carolinelester.github.io/Word-Guess-Game/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="product-5"
+              class="product-carousel-item"
+              style="background-image: url(./img/GOT.png)"
+            >
+              <div class="product-description">
+                <h5>GOT Trivia</h5>
+                <p>
+                  HTML, Bootstrap, CSS, JQuery.
+                  <a
+                    href="https://github.com/carolinelester/Trivia-Game"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/Trivia-Game/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
+                <a
+                  href="https://carolinelester.github.io/Trivia-Game/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="product-6"
+              class="product-carousel-item"
+              style="background-image: url(./img/train.png)"
+            >
+              <div class="product-description">
+                <h5>Train Scheduler</h5>
+                <p>
+                  HTML, Bootstrap, Firebase, Javascript.
+                  <a
+                    href="https://github.com/carolinelester/Train-Scheduler"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/Train-Scheduler/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
+
+                <a
+                  href="https://carolinelester.github.io/Train-Scheduler/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="product-7"
+              class="product-carousel-item"
+              style="background-image: url(./img/tulumwedding.png)"
+            >
+              <div class="product-description">
+                <h5>Tulum Wedding Website</h5>
+                <p>
+                  HTML, CSS and Javascript.
+                  <a
+                    href="https://github.com/carolinelester/bradley-tulum-wedding"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/bradley-tulum-wedding/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
+
+                <a
+                  href="https://carolinelester.github.io/bradley-tulum-wedding/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="product-8"
+              class="product-carousel-item"
+              style="background-image: url(./img/2000.png)"
+            >
+              <div class="product-description">
+                <h5>2000's Icon's GIF Generator</h5>
+                <p>
+                  HTML, CSS, Javascript, API.
+                  <a
+                    href="https://github.com/carolinelester/2000sGifGenerator"
+                    target="_blank"
+                    >Click here for the Code. </a
+                  ><a
+                    href="https://carolinelester.github.io/2000sGifGenerator/"
+                    target="_blank"
+                    >Click here for Website.</a
+                  >
+                </p>
+
+                <a
+                  href="https://carolinelester.github.io/2000sGifGenerator/"
+                  target="_blank"
+                  class="product-link"
+                >
+                  &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row products-right">
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="7">
-              <img src="./img/tulumwedding.png" alt="">
+
+        <div class="col-lg-4 col-md-12 order-3 products-right-outer">
+          <div class="row products-right">
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="5">
+                <img src="./img/GOT.png" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="6">
+                <img src="./img/train.png" alt="" />
+              </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="product-wrap" data-product-id="8">
-              <img src="./img/2000.png" alt="">
+          <div class="row products-right">
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="7">
+                <img src="./img/tulumwedding.png" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="product-wrap" data-product-id="8">
+                <img src="./img/2000.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div><!--end products-->
+      <!--end products-->
 
-
-    <!--prices-->
-    <div id="prices" class="row elem-border">
-      <div class="col-lg-2 prices-left">
-        <h3>Here is<br/> My<br/> Education</h3>
-      </div>
-      <div class="col-lg-10">
-        <div class="row prices-right">
-          <div class="col-sm-4 col-12">
-            <div class="prices-wrap">
-              <h4>Auburn</h4>
-              <p>Engineering</p>
-              <span>&larr;</span>
+      <!--prices-->
+      <div id="prices" class="row elem-border">
+        <div class="col-lg-2 prices-left">
+          <h3>
+            Here is<br />
+            My<br />
+            Education
+          </h3>
+        </div>
+        <div class="col-lg-10">
+          <div class="row prices-right">
+            <div class="col-sm-4 col-12">
+              <div class="prices-wrap">
+                <h4>Auburn</h4>
+                <p>Engineering</p>
+                <span>&larr;</span>
+              </div>
+              <div class="prices-details">
+                <h5>Auburn University</h5>
+                <p>
+                  I completed my Bachelors in Industrial and Systems Engineering
+                </p>
+                <ul>
+                  <li>Programming</li>
+                  <li>Simulation</li>
+                  <li>Manufacturing</li>
+                  <li>Operations Research</li>
+                  <li>Database Apps</li>
+                </ul>
+                <span>&larr;</span>
+              </div>
             </div>
-            <div class="prices-details">
-              <h5>Auburn University</h5>
-              <p>I completed my Bachelors in Industrial and Systems Engineering</p>
-              <ul>
-                <li>Programming</li>
-                <li>Simulation</li>
-                <li>Manufacturing</li>
-                <li>Operations Research</li>
-                <li>Database Apps</li>
-              </ul>
-              <span>&larr;</span>
+            <div class="col-sm-4 col-12">
+              <div class="prices-wrap">
+                <h4>UCLA</h4>
+                <p>Coding and Web Development</p>
+                <span>&larr;</span>
+              </div>
+              <div class="prices-details">
+                <h5>UCLA</h5>
+                <p>
+                  Professional Certificate in Coding and Web Development (full
+                  stack)
+                </p>
+                <ul>
+                  <li>Front End</li>
+                  <li>Back End</li>
+                  <li>Web Design</li>
+                  <li>UX UI</li>
+                </ul>
+                <span>&larr;</span>
+              </div>
             </div>
-          </div>
-          <div class="col-sm-4 col-12">
-            <div class="prices-wrap">
-              <h4>UCLA</h4>
-              <p>Coding and Web Development</p>
-              <span>&larr;</span>
-            </div>
-            <div class="prices-details">
-              <h5>UCLA</h5>
-              <p>Professional Certificate in Coding and Web Development (full stack)</p>
-              <ul>
-                <li>Front End</li>
-                <li>Back End</li>
-                <li>Web Design</li>
-                <li>UX UI</li>
-              </ul>
-              <span>&larr;</span>
-            </div>
-          </div>
-          <div class="col-sm-4 col-12">
-            <div class="prices-wrap reveal-left">
-              <h4>GA Tech</h4>
-              <p>Computer Science</p>
-              <span>&rarr;</span>
-            </div>
-            <div class="prices-details">
-              <h5>Georgia Tech</h5>
-              <p>Masters in Computer Science with Specialization in Interactive Intelligence</p>
-              <ul>
-                <li>HCI</li>
-                <li>Operating Systems</li>
-                <li>AI Design</li>
-                <li>Software Dev</li>
-              </ul>
-              <span>&larr;</span>
+            <div class="col-sm-4 col-12">
+              <div class="prices-wrap reveal-left">
+                <h4>GA Tech</h4>
+                <p>Computer Science</p>
+                <span>&rarr;</span>
+              </div>
+              <div class="prices-details">
+                <h5>Georgia Tech</h5>
+                <p>
+                  Masters in Computer Science with Specialization in Interactive
+                  Intelligence
+                </p>
+                <ul>
+                  <li>HCI</li>
+                  <li>Operating Systems</li>
+                  <li>AI Design</li>
+                  <li>Software Dev</li>
+                </ul>
+                <span>&larr;</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div><!--end prices-->
+      <!--end prices-->
 
-
-    <!--Video-->
-    <div id="video" class="row elem-border">
-      <div class="col-lg-4 video-left">
-        <h3>Here<br/> are good<br/> tunes</h3>
-      </div>
+      <!--Video-->
+      <div id="video" class="row elem-border">
+        <div class="col-lg-4 video-left">
+          <h3>
+            Here<br />
+            are good<br />
+            tunes
+          </h3>
+        </div>
         <div id="video-wrap" class="col-lg-8">
-        <p>play</p>
-        <img class="placeholder-image" src="./img/bali.jpg" alt="">
-        <div class="owl-carousel owl-theme">
-          <div class="item-wrap">
-            <div class="item-video">
-              <a class="owl-video" href="https://youtu.be/h96MGcsi7GQ"></a>
+          <p>play</p>
+          <img class="placeholder-image" src="./img/bali.jpg" alt="" />
+          <div class="owl-carousel owl-theme">
+            <div class="item-wrap">
+              <div class="item-video">
+                <a class="owl-video" href="https://youtu.be/h96MGcsi7GQ"></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div><!--end video-->
+      <!--end video-->
 
-
-    <!--Gallery-->
-    <div id="gallery" class="row elem-border">
-      <div class="col-lg-8 order-2 order-lg-1 carousel-wrap">
-        <div id="gallery-carousel" class="owl-carousel owl-theme">
-            <div class="img-wrap"><img src="./img/skateboard.png" alt="skateboard"/></div>
-            <div class="img-wrap"><img src="./img/madrid.png" alt="madrid"/></div>
-            <div class="img-wrap"><img src="./img/surf.png" alt="surfing"/></div>
-            <div class="img-wrap"><img src="./img/eastwall.png" alt="berlin"/></div>
-            <div class="img-wrap"><img src="./img/london.png" alt="london"/></div>
-            <div class="img-wrap"><img src="./img/tulum.png" alt="tulum"/></div>
-            <div class="img-wrap"><img src="./img/ski.png" alt="skiing"/></div>
-            <div class="img-wrap"><img src="./img/savannah.png" alt="savannah"/></div>
-            
-        </div>
-      </div>
-      <div class="col-lg-4 order-1 order-lg-2 gallery-right">
-        <h3>Here<br/> are photos<br/> of me doing <br/> things</h3>
-      </div>
-    </div><!--end gallery-->
-
-
-    <!--services-->
-    <div id="services" class="row">
-      <div class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2">
-        <div class="row elem-border services-left">
-          <div class="col-lg-12 col-sm-6 col-6">
-            <h4>I love<br/> Travel</h4>
-            <p>I think traveling and experiencing other cultures is the most rewarding thing you can do on this Earth.</p>
-            <a href="#" data-toggle="modal" data-target=".template-travel">Read more</a>
-          </div>
-          <div class="col-lg-12 col-sm-6 col-6">
-            <h4>I love<br/> food</h4>
-            <p>I don't think I've ever met a food I didn't like. I'm a regular at the local taco joint because life is better with a margarita.</p>
-            <a href="#" data-toggle="modal" data-target=".template-food">Read more</a>
+      <!--Gallery-->
+      <div id="gallery" class="row elem-border">
+        <div class="col-lg-8 order-2 order-lg-1 carousel-wrap">
+          <div id="gallery-carousel" class="owl-carousel owl-theme">
+            <div class="img-wrap">
+              <img src="./img/skateboard.png" alt="skateboard" />
+            </div>
+            <div class="img-wrap">
+              <img src="./img/madrid.png" alt="madrid" />
+            </div>
+            <div class="img-wrap">
+              <img src="./img/surf.png" alt="surfing" />
+            </div>
+            <div class="img-wrap">
+              <img src="./img/eastwall.png" alt="berlin" />
+            </div>
+            <div class="img-wrap">
+              <img src="./img/london.png" alt="london" />
+            </div>
+            <div class="img-wrap">
+              <img src="./img/tulum.png" alt="tulum" />
+            </div>
+            <div class="img-wrap"><img src="./img/ski.png" alt="skiing" /></div>
+            <div class="img-wrap">
+              <img src="./img/savannah.png" alt="savannah" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center services-center">
-        <h3>Here are <br/> Things I like<br/> to do</h3>
-      </div>
-      <div class="col-lg-4 col-md-12 order-3">
-        <div class="row elem-border services-right">
-          <div class="col-lg-12 col-sm-6 col-6">
-            <h4>I love<br/> Art </h4>
-            <p>My love for art and design is the backbone of what I do. Why shouldn't the world be colorful and interesting?</p>
-            <a href="#" data-toggle="modal" data-target=".template-art">Read more</a>
-          </div>
-          <div class="col-lg-12 col-sm-6 col-6">
-            <h4>I love<br/> Music</h4>
-            <p>I'm a self proclaimed techno tourist and love to travel to see music around the world. Catch me in Ibiza or Berlin.</p>
-            <a href="#" data-toggle="modal" data-target=".template-music">Read more</a>
-          </div>
+        <div class="col-lg-4 order-1 order-lg-2 gallery-right">
+          <h3>
+            Here<br />
+            are photos<br />
+            of me doing <br />
+            things
+          </h3>
         </div>
       </div>
-    </div><!--end services-->
+      <!--end gallery-->
 
-
-    <!--team-->
-    <div id="team" class="row elem-border">
-      <div class="col-lg-3 col-md-12 team-left">
-        <h3>Here<br/> are Great<br/> Travels</h3>
-      </div>
-      <div class="team-carousel-wrap col-lg-9 col-md-12">
-        <div class="team-carousel owl-carousel owl-theme">
-
-          <div class="team-member">
-            <div class="team-wrap">
-              <p><span>Tropical</span></p>
-              <div>
-                <img src="./img/mayan ruins.png" alt="">
-              </div>
-              <span class="team-member-name">
-              <a class="btl-anchor" href="https://www.instagram.com/tulum/" target="_blank">Tulum, Mexico</a>
-            </span>
+      <!--services-->
+      <div id="services" class="row">
+        <div
+          class="col-lg-4 col-md-12 order-2 order-lg-1 order-md-2 order-sm-2"
+        >
+          <div class="row elem-border services-left">
+            <div class="col-lg-12 col-sm-6 col-6">
+              <h4>
+                I love<br />
+                Travel
+              </h4>
+              <p>
+                I think traveling and experiencing other cultures is the most
+                rewarding thing you can do on this Earth.
+              </p>
+              <a href="#" data-toggle="modal" data-target=".template-travel"
+                >Read more</a
+              >
+            </div>
+            <div class="col-lg-12 col-sm-6 col-6">
+              <h4>
+                I love<br />
+                food
+              </h4>
+              <p>
+                I don't think I've ever met a food I didn't like. I'm a regular
+                at the local taco joint because life is better with a margarita.
+              </p>
+              <a href="#" data-toggle="modal" data-target=".template-food"
+                >Read more</a
+              >
             </div>
           </div>
-
-          <div class="team-member">
-            <div class="team-wrap">
-              <p><span>Edgy</span></p>
-              <div>
-                <img src="./img/berlin.png" alt="">
-              </div>
-              <span class="team-member-name">
-              <a class="btl-anchor" href="https://travel.usnews.com/Berlin_Germany/Things_To_Do/" target="_blank">Berlin, Germany</a>
-            </span>
-            </div>
-          </div>
-
-          <div class="team-member">
-            <div class="team-wrap">
-              <p><span>Surf</span></p>
-              <div>
-                <img src="./img/morocco1.jpg" alt="">
-              </div>
-              <span class="team-member-name">
-              <a class="btl-anchor" href="https://wearetravelgirls.com/taghazout-morocco/" target="_blank">Taghazout, Morocco</a>
-            </span>
-            </div>
-          </div>
-
-          <div class="team-member">
-            <div class="team-wrap">
-              <p><span>Southern</span></p>
-              <div>
-                <img src="./img/savannah.jpg" alt="">
-              </div>
-              <span class="team-member-name">
-              <a class="btl-anchor" href="https://www.visitsavannah.com/list/15-cant-miss-things-to-do-savannah" target="_blank">Savannah, Georgia</a>
-            </span>
-            </div>
-          </div>
-
-          <div class="team-member">
-            <div class="team-wrap">
-              <p><span>Islands</span></p>
-              <div>
-                <img src="./img/cartagena.jpg" alt="">
-              </div>
-              <span class="team-member-name">
-              <a class="btl-anchor" href="https://theculturetrip.com/south-america/colombia/articles/the-most-beautiful-beaches-to-visit-in-cartagena/" target="_blank">Cartagena, Colombia</a>
-            </span>
-            </div>
-          </div>
-
-          <div class="team-member">
-            <div class="team-wrap">
-              <p><span>Snow</span></p>
-              <div>
-                <img src="./img/jacksonhole.jpg" alt="">
-              </div>
-              <span class="team-member-name">
-              <a class="btl-anchor" href="https://www.jacksonholewy.com/things-to-do/" target="_blank">Jackson Hole, Wyoming</a>
-            </span>
-            </div>
-          </div>
-
         </div>
-        <div class="team-carousel-nav"></div>
-      </div>
-    </div><!--end team-->
-
-
-    <!--Contact-->
-    <div id="contact" class="row elem-border">
-      <div class="col-lg-2 col-md-12 order-2 order-lg-1 order-md-2 contact-left">
-        <ul id="social">
-          <li><a href="https://github.com/carolinelester" target="_blank">Github</a></li><!--
-          --><li><a href="https://www.linkedin.com/in/caroline-lester-4a49b4195/" target="_blank">LinkedIn</a></li><!--
-          --><li><a href="https://www.instagram.com/carolinelesta/" target="_blank">Instagram</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right">
-        <div class="row">
-          <div class="col-md-3 col-sm-12 contact-title">
-            <h3>Contact<br/> Me<br/> Thanks!</h3>
-          </div>
-          <div class="col-md-9 col-sm-12">
-            <form class="contact-form" method="post" action="https://formspree.io/mgenzbbp">
-              <span class="sending">We're Sending Your Message</span>
-              <span class="sent">Message received, I'll be in touch.</span>
-              <div class="form-group">
-                <label for="contact-name">Name</label>
-                <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Name" required><!--
-                --><input type="email" class="form-control" id="contact-email" name="contact-email" placeholder="Email" required>
-                <label for="contact-email">Email</label>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
-              </div>
-              <div class="text-right">
-                <button type="submit" class="btn btn-primary">Send</button>
-              </div>
-            </form>
+        <div
+          class="col-lg-4 col-md-12 order-1 order-lg-2 order-md-1 order-sm-1 text-center services-center"
+        >
+          <h3>
+            Here are <br />
+            Things I like<br />
+            to do
+          </h3>
+        </div>
+        <div class="col-lg-4 col-md-12 order-3">
+          <div class="row elem-border services-right">
+            <div class="col-lg-12 col-sm-6 col-6">
+              <h4>
+                I love<br />
+                Art
+              </h4>
+              <p>
+                My love for art and design is the backbone of what I do. Why
+                shouldn't the world be colorful and interesting?
+              </p>
+              <a href="#" data-toggle="modal" data-target=".template-art"
+                >Read more</a
+              >
+            </div>
+            <div class="col-lg-12 col-sm-6 col-6">
+              <h4>
+                I love<br />
+                Music
+              </h4>
+              <p>
+                I'm a self proclaimed techno tourist and love to travel to see
+                music around the world. Catch me in Ibiza or Berlin.
+              </p>
+              <a href="#" data-toggle="modal" data-target=".template-music"
+                >Read more</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>    <!--end contact-->
+      <!--end services-->
 
+      <!--team-->
+      <div id="team" class="row elem-border">
+        <div class="col-lg-3 col-md-12 team-left">
+          <h3>
+            Here<br />
+            are Great<br />
+            Travels
+          </h3>
+        </div>
+        <div class="team-carousel-wrap col-lg-9 col-md-12">
+          <div class="team-carousel owl-carousel owl-theme">
+            <div class="team-member">
+              <div class="team-wrap">
+                <p><span>Tropical</span></p>
+                <div>
+                  <img src="./img/mayan ruins.png" alt="" />
+                </div>
+                <span class="team-member-name">
+                  <a
+                    class="btl-anchor"
+                    href="https://www.instagram.com/tulum/"
+                    target="_blank"
+                    >Tulum, Mexico</a
+                  >
+                </span>
+              </div>
+            </div>
 
-  </div><!--end main-->
+            <div class="team-member">
+              <div class="team-wrap">
+                <p><span>Edgy</span></p>
+                <div>
+                  <img src="./img/berlin.png" alt="" />
+                </div>
+                <span class="team-member-name">
+                  <a
+                    class="btl-anchor"
+                    href="https://travel.usnews.com/Berlin_Germany/Things_To_Do/"
+                    target="_blank"
+                    >Berlin, Germany</a
+                  >
+                </span>
+              </div>
+            </div>
 
+            <div class="team-member">
+              <div class="team-wrap">
+                <p><span>Surf</span></p>
+                <div>
+                  <img src="./img/morocco1.jpg" alt="" />
+                </div>
+                <span class="team-member-name">
+                  <a
+                    class="btl-anchor"
+                    href="https://wearetravelgirls.com/taghazout-morocco/"
+                    target="_blank"
+                    >Taghazout, Morocco</a
+                  >
+                </span>
+              </div>
+            </div>
 
-  <!--Footer-->
-  <footer class="container-fluid">
-    <div class="row elem-border">
-      <div class="col-12 text-right">
-        <p><a href="mailto:carolineclester@gmail.com?subject=contact Lester via website">
-          EMAIL carolineclester@gmail.com          </a>
-        <a href="tel:+1334-531-4844">    CALL lester</a></p>
+            <div class="team-member">
+              <div class="team-wrap">
+                <p><span>Southern</span></p>
+                <div>
+                  <img src="./img/savannah.jpg" alt="" />
+                </div>
+                <span class="team-member-name">
+                  <a
+                    class="btl-anchor"
+                    href="https://www.visitsavannah.com/list/15-cant-miss-things-to-do-savannah"
+                    target="_blank"
+                    >Savannah, Georgia</a
+                  >
+                </span>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="team-wrap">
+                <p><span>Islands</span></p>
+                <div>
+                  <img src="./img/cartagena.jpg" alt="" />
+                </div>
+                <span class="team-member-name">
+                  <a
+                    class="btl-anchor"
+                    href="https://theculturetrip.com/south-america/colombia/articles/the-most-beautiful-beaches-to-visit-in-cartagena/"
+                    target="_blank"
+                    >Cartagena, Colombia</a
+                  >
+                </span>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="team-wrap">
+                <p><span>Snow</span></p>
+                <div>
+                  <img src="./img/jacksonhole.jpg" alt="" />
+                </div>
+                <span class="team-member-name">
+                  <a
+                    class="btl-anchor"
+                    href="https://www.jacksonholewy.com/things-to-do/"
+                    target="_blank"
+                    >Jackson Hole, Wyoming</a
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="team-carousel-nav"></div>
+        </div>
       </div>
+      <!--end team-->
+
+      <!--Contact-->
+      <div id="contact" class="row elem-border">
+        <div
+          class="col-lg-2 col-md-12 order-2 order-lg-1 order-md-2 contact-left"
+        >
+          <ul id="social">
+            <li>
+              <a href="https://github.com/carolinelester" target="_blank"
+                >Github</a
+              >
+            </li>
+            <!--
+          -->
+            <li>
+              <a
+                href="https://www.linkedin.com/in/caroline-lester-4a49b4195/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <!--
+          -->
+            <li>
+              <a href="https://www.instagram.com/carolinelesta/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1 contact-right"
+        >
+          <div class="row">
+            <div class="col-md-3 col-sm-12 contact-title">
+              <h3>
+                Contact<br />
+                Me<br />
+                Thanks!
+              </h3>
+            </div>
+            <div class="col-md-9 col-sm-12">
+              <form
+                class="contact-form"
+                method="post"
+                action="https://formspree.io/mgenzbbp"
+              >
+                <span class="sending">We're Sending Your Message</span>
+                <span class="sent">Message received, I'll be in touch.</span>
+                <div class="form-group">
+                  <label for="contact-name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contact-name"
+                    name="contact-name"
+                    placeholder="Name"
+                    required
+                  /><!--
+                --><input
+                    type="email"
+                    class="form-control"
+                    id="contact-email"
+                    name="contact-email"
+                    placeholder="Email"
+                    required
+                  />
+                  <label for="contact-email">Email</label>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end contact-->
     </div>
-  </footer><!--end footer-->
+    <!--end main-->
+
+    <!--Footer-->
+    <footer class="container-fluid">
+      <div class="row elem-border">
+        <div class="col-12 text-right">
+          <p>
+            <a
+              href="mailto:carolineclester@gmail.com?subject=contact Lester via website"
+            >
+              EMAIL carolineclester@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
 
     <!--jquery-->
     <script src="./js/vendor/jquery-3.3.1.min.js"></script>
-
 
     <!--Bootstrap Compressed-->
     <!--<script src="./js/vendor/bootstrap.bundle.min.js"></script>-->
@@ -966,20 +1458,16 @@
     <!--Bootstrap Uncompressed-->
     <script src="./js/vendor/bootstrap.bundle.js"></script>
 
-
     <!--Owl carousel Compressed-->
     <!--<script src="./js/vendor/owl.carousel.min.js"></script>-->
 
     <!--Owl carousel Uncompressed-->
     <script src="./js/vendor/owl.carousel.js"></script>
 
-
     <!--Main js Compressed-->
     <!--<script src="./js/main.min.js"></script>-->
 
     <!--Main js Uncompressed-->
     <script src="./js/main.js"></script>
-
-</body>
-
+  </body>
 </html>

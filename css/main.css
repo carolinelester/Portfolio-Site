@@ -10578,7 +10578,10 @@ div#contact {
       div#contact ul#social li:hover {
         background: #000;
         color: #fff; }
-      div#contact ul#social li:last-child {
+        div#contact ul#social li a:hover {
+          background: #000;
+          color: #fff; }
+          div#contact ul#social li:last-child {
         border-bottom: transparent; }
         @media (max-width: 991.98px) {
           div#contact ul#social li:last-child {
